@@ -1,0 +1,80 @@
+[0m15:41:56.307585 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001EFE6E17D60>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001EFE7E77430>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001EFE7E77220>]}
+
+
+============================== 15:41:56.317585 | 8731b26e-413a-4a22-a82d-7048e135bdbf ==============================
+[0m15:41:56.317585 [info ] [MainThread]: Running with dbt=1.10.23
+[0m15:41:56.318585 [debug] [MainThread]: running dbt with arguments {'debug': 'False', 'fail_fast': 'False', 'log_cache_events': 'False', 'send_anonymous_usage_stats': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'cache_selected_only': 'False', 'log_format': 'default', 'no_print': 'None', 'version_check': 'True', 'empty': 'None', 'printer_width': '80', 'quiet': 'False', 'log_path': 'logs', 'partial_parse': 'True', 'warn_error': 'None', 'write_json': 'True', 'introspect': 'True', 'target_path': 'None', 'invocation_command': 'dbt init nova_dbt', 'static_parser': 'True', 'profiles_dir': 'C:\\Users\\ERKAN\\.dbt', 'use_experimental_parser': 'False', 'use_colors': 'True', 'indirect_selection': 'eager'}
+[0m15:41:56.477925 [warn ] [MainThread]: [[33mWARNING[0m]: This version of dbt is deprecated and no longer receives regular patches, including for known bugs. Please upgrade to a newer supported version of dbt for new projects: https://docs.getdbt.com/docs/dbt-versions?utm_source=dbt-cli
+[0m15:41:56.478929 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'deprecated_version_invocation', 'label': '8731b26e-413a-4a22-a82d-7048e135bdbf', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001EFE7E77430>]}
+[0m15:41:56.485907 [debug] [MainThread]: Starter project path: C:\Users\ERKAN\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\dbt\include\starter_project
+[0m15:41:56.544909 [info ] [MainThread]: 
+Your new dbt project "nova_dbt" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m15:41:56.545909 [info ] [MainThread]: Setting up your profile.
+[0m15:43:02.784596 [info ] [MainThread]: Profile nova_dbt written to C:\Users\ERKAN\.dbt\profiles.yml using target's sample configuration. Once updated, you'll be able to start developing with dbt.
+[0m15:43:02.786594 [debug] [MainThread]: Command `python -m dbt.cli.main init` succeeded at 15:43:02.786594 after 66.55 seconds
+[0m15:43:02.786594 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001EFE6E17D60>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001EFE7F806A0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001EFE7E771C0>]}
+[0m15:43:02.787580 [debug] [MainThread]: Flushing usage events
+[0m15:43:03.593185 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m22:54:41.005786 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021754F88CD0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021755FE9340>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021755FE9130>]}
+
+
+============================== 22:54:41.016786 | 00a7ea09-1df3-4c91-9997-4c97283d7fa9 ==============================
+[0m22:54:41.016786 [info ] [MainThread]: Running with dbt=1.10.23
+[0m22:54:41.017787 [debug] [MainThread]: running dbt with arguments {'debug': 'False', 'fail_fast': 'False', 'log_cache_events': 'False', 'send_anonymous_usage_stats': 'True', 'cache_selected_only': 'False', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'log_format': 'default', 'target_path': 'None', 'version_check': 'True', 'empty': 'False', 'printer_width': '80', 'quiet': 'False', 'introspect': 'True', 'log_path': 'logs', 'warn_error': 'None', 'write_json': 'True', 'partial_parse': 'True', 'no_print': 'None', 'invocation_command': 'dbt run', 'static_parser': 'True', 'profiles_dir': 'C:\\Users\\ERKAN\\.dbt', 'use_experimental_parser': 'False', 'use_colors': 'True', 'indirect_selection': 'eager'}
+[0m22:54:41.018789 [info ] [MainThread]: This version of dbt is deprecated and no longer receives regular patches, including for known bugs. We recommend upgrading to a newer supported version of dbt: https://docs.getdbt.com/docs/dbt-versions
+[0m22:54:41.019788 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'deprecated_version_invocation', 'label': '00a7ea09-1df3-4c91-9997-4c97283d7fa9', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021754F88CD0>]}
+[0m22:54:41.019788 [error] [MainThread]: Encountered an error:
+Runtime Error
+  No dbt_project.yml found at expected path C:\Users\ERKAN\Desktop\YUSUF\DATA\dbt_project.yml
+  Verify that each entry within packages.yml (and their transitive dependencies) contains a file named dbt_project.yml
+  
+[0m22:54:41.021786 [debug] [MainThread]: Command `python -m dbt.cli.main run` failed at 22:54:41.020787 after 0.09 seconds
+[0m22:54:41.021786 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021754F88CD0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021755FE9040>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021755FE9550>]}
+[0m22:54:41.022787 [debug] [MainThread]: Flushing usage events
+[0m22:54:41.700310 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m22:59:38.721986 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000216FFBA7D60>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021680C45E80>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021680C45C70>]}
+
+
+============================== 22:59:38.724998 | 42be12fe-9805-4955-8468-f1fb46ab99cd ==============================
+[0m22:59:38.724998 [info ] [MainThread]: Running with dbt=1.10.23
+[0m22:59:38.725986 [debug] [MainThread]: running dbt with arguments {'debug': 'False', 'fail_fast': 'False', 'log_cache_events': 'False', 'send_anonymous_usage_stats': 'True', 'cache_selected_only': 'False', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None', 'invocation_command': 'dbt run', 'version_check': 'True', 'empty': 'False', 'printer_width': '80', 'quiet': 'False', 'log_path': 'logs', 'log_format': 'default', 'warn_error': 'None', 'write_json': 'True', 'no_print': 'None', 'partial_parse': 'True', 'introspect': 'True', 'static_parser': 'True', 'profiles_dir': 'C:\\Users\\ERKAN\\.dbt', 'use_experimental_parser': 'False', 'use_colors': 'True', 'indirect_selection': 'eager'}
+[0m22:59:38.726988 [info ] [MainThread]: This version of dbt is deprecated and no longer receives regular patches, including for known bugs. We recommend upgrading to a newer supported version of dbt: https://docs.getdbt.com/docs/dbt-versions
+[0m22:59:38.726988 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'deprecated_version_invocation', 'label': '42be12fe-9805-4955-8468-f1fb46ab99cd', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000216FFBA7D60>]}
+[0m22:59:38.727988 [error] [MainThread]: Encountered an error:
+Runtime Error
+  No dbt_project.yml found at expected path C:\Users\ERKAN\Desktop\YUSUF\DATA\dbt_project.yml
+  Verify that each entry within packages.yml (and their transitive dependencies) contains a file named dbt_project.yml
+  
+[0m22:59:38.728988 [debug] [MainThread]: Command `python -m dbt.cli.main run` failed at 22:59:38.728988 after 0.08 seconds
+[0m22:59:38.729986 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000216FFBA7D60>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021680C45B80>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021680C45A00>]}
+[0m22:59:38.729986 [debug] [MainThread]: Flushing usage events
+[0m22:59:39.399087 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m23:05:10.938007 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000017351266E70>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000173512676B0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000017350884A70>]}
+
+
+============================== 23:05:10.942343 | be5917f4-c4e8-4547-9cea-911c3fe3a3b0 ==============================
+[0m23:05:10.942343 [info ] [MainThread]: Running with dbt=1.12.6
+[0m23:05:10.942343 [debug] [MainThread]: running dbt with arguments {'version_check': 'True', 'no_print': 'None', 'static_parser': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'maximum_seed_size_mib': '1', 'printer_width': '80', 'write_json': 'True', 'introspect': 'True', 'log_cache_events': 'False', 'empty': 'False', 'cache_selected_only': 'False', 'fail_fast': 'False', 'debug': 'False', 'log_format': 'default', 'profiles_dir': 'C:\\Users\\aygun\\.dbt', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'partial_parse': 'True', 'indirect_selection': 'eager', 'hints_enabled': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'invocation_command': 'dbt run', 'log_path': 'logs'}
+[0m23:05:10.942343 [error] [MainThread]: [[31mERROR[0m]: Encountered an error:
+Runtime Error
+  No dbt_project.yml found at expected path C:\Users\aygun\ödev\YBS305-nova-dbt\dbt_project.yml
+  Verify that each entry within packages.yml (and their transitive dependencies) contains a file named dbt_project.yml
+  
+[0m23:05:10.942343 [debug] [MainThread]: Command `python -m dbt.cli.main run` failed at 23:05:10.942343 after 0.35 seconds
+[0m23:05:10.942343 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000017350944470>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000017351F66900>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000017353065610>]}
+[0m23:05:10.942343 [debug] [MainThread]: Flushing usage events
+[0m23:05:11.925445 [debug] [MainThread]: An error was encountered while trying to flush usage events
