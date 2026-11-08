@@ -1,0 +1,37 @@
+age_group,gender,usage_category,student_count,avg_gpa,avg_sleep_hours
+18-20 Yaş,female,Düşük Kullanıcı (<3s),201,3.58,7.63
+18-20 Yaş,male,Yüksek Kullanıcı (>6s),360,2.99,5.68
+21+ Yaş,non-binary,Orta Kullanıcı (3-6s),15,3.55,7.1
+18 Yaş Altı,female,Orta Kullanıcı (3-6s),326,3.47,6.96
+21+ Yaş,female,Yüksek Kullanıcı (>6s),106,3.03,5.6
+18-20 Yaş,non-binary,Orta Kullanıcı (3-6s),42,3.41,7.0
+18 Yaş Altı,non-binary,Orta Kullanıcı (3-6s),14,3.64,6.67
+18 Yaş Altı,prefer not to say,Düşük Kullanıcı (<3s),3,3.53,7.2
+18-20 Yaş,female,Yüksek Kullanıcı (>6s),383,3.07,5.66
+18-20 Yaş,male,Düşük Kullanıcı (<3s),212,3.69,7.7
+18-20 Yaş,prefer not to say,Düşük Kullanıcı (<3s),12,3.78,7.64
+18 Yaş Altı,non-binary,Yüksek Kullanıcı (>6s),11,3.19,5.33
+18 Yaş Altı,female,Düşük Kullanıcı (<3s),87,3.66,7.58
+18-20 Yaş,non-binary,Düşük Kullanıcı (<3s),7,3.74,8.04
+18 Yaş Altı,male,Orta Kullanıcı (3-6s),300,3.49,6.96
+21+ Yaş,male,Yüksek Kullanıcı (>6s),90,3.12,5.59
+21+ Yaş,prefer not to say,Yüksek Kullanıcı (>6s),4,3.23,5.7
+18 Yaş Altı,female,Yüksek Kullanıcı (>6s),199,3.04,5.73
+21+ Yaş,female,Orta Kullanıcı (3-6s),184,3.46,6.96
+18-20 Yaş,non-binary,Yüksek Kullanıcı (>6s),19,2.94,5.11
+21+ Yaş,male,Düşük Kullanıcı (<3s),59,3.69,7.68
+21+ Yaş,prefer not to say,Düşük Kullanıcı (<3s),5,3.12,8.06
+18-20 Yaş,prefer not to say,Yüksek Kullanıcı (>6s),18,2.96,5.58
+18 Yaş Altı,non-binary,Düşük Kullanıcı (<3s),7,3.71,8.07
+18 Yaş Altı,prefer not to say,Orta Kullanıcı (3-6s),11,3.4,6.72
+21+ Yaş,female,Düşük Kullanıcı (<3s),68,3.7,7.65
+18 Yaş Altı,male,Düşük Kullanıcı (<3s),95,3.64,7.7
+18-20 Yaş,prefer not to say,Orta Kullanıcı (3-6s),25,3.55,6.98
+18 Yaş Altı,prefer not to say,Yüksek Kullanıcı (>6s),8,3.29,5.73
+18 Yaş Altı,male,Yüksek Kullanıcı (>6s),159,2.96,5.72
+21+ Yaş,male,Orta Kullanıcı (3-6s),175,3.48,6.99
+21+ Yaş,prefer not to say,Orta Kullanıcı (3-6s),7,3.54,6.56
+18-20 Yaş,female,Orta Kullanıcı (3-6s),680,3.47,7.03
+21+ Yaş,non-binary,Düşük Kullanıcı (<3s),6,3.68,7.68
+18-20 Yaş,male,Orta Kullanıcı (3-6s),601,3.44,6.98
+21+ Yaş,non-binary,Yüksek Kullanıcı (>6s),1,3.28,4.5
