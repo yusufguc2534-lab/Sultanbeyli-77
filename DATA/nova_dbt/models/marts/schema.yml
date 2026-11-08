@@ -1,0 +1,14 @@
+version: 2
+
+models:
+  - name: mart_demographic_summary
+    columns:
+      - name: gender
+        tests:
+          - not_null
+
+  - name: mart_platform_impact
+    columns:
+      - name: total_students
+        tests:
+          - not_null

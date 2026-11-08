@@ -1,0 +1,1909 @@
+[0m15:46:56.987264 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001968C298D60>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001968E307EB0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001968E307D00>]}
+
+
+============================== 15:46:56.991279 | 36757e58-2597-46fb-81af-fd3b6387ca46 ==============================
+[0m15:46:56.991279 [info ] [MainThread]: Running with dbt=1.10.23
+[0m15:46:56.992279 [debug] [MainThread]: running dbt with arguments {'fail_fast': 'False', 'debug': 'False', 'log_cache_events': 'False', 'send_anonymous_usage_stats': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'cache_selected_only': 'False', 'log_format': 'default', 'target_path': 'None', 'version_check': 'True', 'empty': 'False', 'printer_width': '80', 'quiet': 'False', 'introspect': 'True', 'partial_parse': 'True', 'warn_error': 'None', 'write_json': 'True', 'log_path': 'C:\\Users\\ERKAN\\Desktop\\DATA\\nova_dbt\\logs', 'no_print': 'None', 'invocation_command': 'dbt run', 'static_parser': 'True', 'profiles_dir': 'C:\\Users\\ERKAN\\.dbt', 'use_experimental_parser': 'False', 'use_colors': 'True', 'indirect_selection': 'eager'}
+[0m15:46:56.994277 [info ] [MainThread]: This version of dbt is deprecated and no longer receives regular patches, including for known bugs. We recommend upgrading to a newer supported version of dbt: https://docs.getdbt.com/docs/dbt-versions
+[0m15:46:56.995294 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'deprecated_version_invocation', 'label': '36757e58-2597-46fb-81af-fd3b6387ca46', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001968C298D60>]}
+[0m15:46:57.228009 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '36757e58-2597-46fb-81af-fd3b6387ca46', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001968E3E6D90>]}
+[0m15:46:57.273024 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '36757e58-2597-46fb-81af-fd3b6387ca46', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001968E3FB970>]}
+[0m15:46:57.286021 [info ] [MainThread]: Registered adapter: duckdb=1.10.0
+[0m15:46:57.599009 [debug] [MainThread]: checksum: 2b1352ea083ab2415ad0dbf54db2d1ac6054af1cb939f9d756e37438b9e9a7cf, vars: {}, profile: , target: , version: 1.10.23
+[0m15:46:57.600007 [info ] [MainThread]: Unable to do partial parsing because saved manifest not found. Starting full parse.
+[0m15:46:57.601007 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': '36757e58-2597-46fb-81af-fd3b6387ca46', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001968E5BAC10>]}
+[0m15:46:59.336208 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '36757e58-2597-46fb-81af-fd3b6387ca46', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001968ED01130>]}
+[0m15:46:59.397203 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\ERKAN\Desktop\DATA\nova_dbt\target\manifest.json
+[0m15:46:59.401200 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\ERKAN\Desktop\DATA\nova_dbt\target\semantic_manifest.json
+[0m15:46:59.457882 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '36757e58-2597-46fb-81af-fd3b6387ca46', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001968ECE0670>]}
+[0m15:46:59.458880 [info ] [MainThread]: Found 2 models, 4 data tests, 456 macros
+[0m15:46:59.458880 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '36757e58-2597-46fb-81af-fd3b6387ca46', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001968C119C70>]}
+[0m15:46:59.460878 [info ] [MainThread]: 
+[0m15:46:59.460878 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m15:46:59.461879 [info ] [MainThread]: 
+[0m15:46:59.461879 [debug] [MainThread]: Acquiring new duckdb connection 'master'
+[0m15:46:59.466878 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_dev'
+[0m15:47:01.553485 [debug] [ThreadPool]: Using duckdb connection "list_dev"
+[0m15:47:01.554485 [debug] [ThreadPool]: On list_dev: /* {"app": "dbt", "dbt_version": "1.10.23", "profile_name": "nova_dbt", "target_name": "dev", "connection_name": "list_dev"} */
+
+    
+    select schema_name
+    from system.information_schema.schemata
+    
+    where lower(catalog_name) = '"dev"'
+    
+  
+  
+[0m15:47:01.554485 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m15:47:01.574469 [debug] [ThreadPool]: SQL status: OK in 0.020 seconds
+[0m15:47:01.576483 [debug] [ThreadPool]: On list_dev: Close
+[0m15:47:01.577483 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_dev, now create_dev_main)
+[0m15:47:01.577483 [debug] [ThreadPool]: Creating schema "database: "dev"
+schema: "main"
+"
+[0m15:47:01.583485 [debug] [ThreadPool]: Using duckdb connection "create_dev_main"
+[0m15:47:01.583485 [debug] [ThreadPool]: On create_dev_main: /* {"app": "dbt", "dbt_version": "1.10.23", "profile_name": "nova_dbt", "target_name": "dev", "connection_name": "create_dev_main"} */
+
+    
+        select type from duckdb_databases()
+        where lower(database_name)='dev'
+        and type='sqlite'
+    
+  
+[0m15:47:01.584485 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m15:47:01.585486 [debug] [ThreadPool]: SQL status: OK in 0.001 seconds
+[0m15:47:01.586485 [debug] [ThreadPool]: Using duckdb connection "create_dev_main"
+[0m15:47:01.586485 [debug] [ThreadPool]: On create_dev_main: BEGIN
+[0m15:47:01.587470 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m15:47:01.587470 [debug] [ThreadPool]: Using duckdb connection "create_dev_main"
+[0m15:47:01.588472 [debug] [ThreadPool]: On create_dev_main: /* {"app": "dbt", "dbt_version": "1.10.23", "profile_name": "nova_dbt", "target_name": "dev", "connection_name": "create_dev_main"} */
+
+    
+    
+        create schema if not exists "dev"."main"
+    
+[0m15:47:01.589471 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m15:47:01.590470 [debug] [ThreadPool]: On create_dev_main: COMMIT
+[0m15:47:01.590470 [debug] [ThreadPool]: Using duckdb connection "create_dev_main"
+[0m15:47:01.590470 [debug] [ThreadPool]: On create_dev_main: COMMIT
+[0m15:47:01.591470 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m15:47:01.592469 [debug] [ThreadPool]: On create_dev_main: Close
+[0m15:47:01.593490 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_dev_main'
+[0m15:47:01.597485 [debug] [ThreadPool]: Using duckdb connection "list_dev_main"
+[0m15:47:01.598485 [debug] [ThreadPool]: On list_dev_main: BEGIN
+[0m15:47:01.598485 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m15:47:01.599488 [debug] [ThreadPool]: SQL status: OK in 0.001 seconds
+[0m15:47:01.599488 [debug] [ThreadPool]: Using duckdb connection "list_dev_main"
+[0m15:47:01.600486 [debug] [ThreadPool]: On list_dev_main: /* {"app": "dbt", "dbt_version": "1.10.23", "profile_name": "nova_dbt", "target_name": "dev", "connection_name": "list_dev_main"} */
+select
+      'dev' as database,
+      table_name as name,
+      table_schema as schema,
+      CASE table_type
+        WHEN 'BASE TABLE' THEN 'table'
+        WHEN 'VIEW' THEN 'view'
+        WHEN 'LOCAL TEMPORARY' THEN 'table'
+        END as type
+    from system.information_schema.tables
+    where lower(table_schema) = 'main'
+    and lower(table_catalog) = 'dev'
+  
+[0m15:47:01.612483 [debug] [ThreadPool]: SQL status: OK in 0.012 seconds
+[0m15:47:01.614485 [debug] [ThreadPool]: On list_dev_main: ROLLBACK
+[0m15:47:01.614485 [debug] [ThreadPool]: Failed to rollback 'list_dev_main'
+[0m15:47:01.615485 [debug] [ThreadPool]: On list_dev_main: Close
+[0m15:47:01.616485 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '36757e58-2597-46fb-81af-fd3b6387ca46', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001968EE078B0>]}
+[0m15:47:01.616485 [debug] [MainThread]: Using duckdb connection "master"
+[0m15:47:01.617487 [debug] [MainThread]: On master: BEGIN
+[0m15:47:01.617487 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m15:47:01.618492 [debug] [MainThread]: SQL status: OK in 0.001 seconds
+[0m15:47:01.618492 [debug] [MainThread]: On master: COMMIT
+[0m15:47:01.619485 [debug] [MainThread]: Using duckdb connection "master"
+[0m15:47:01.619485 [debug] [MainThread]: On master: COMMIT
+[0m15:47:01.620485 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m15:47:01.621487 [debug] [MainThread]: On master: Close
+[0m15:47:01.627492 [debug] [Thread-1  ]: Began running node model.nova_dbt.my_first_dbt_model
+[0m15:47:01.628501 [info ] [Thread-1  ]: 1 of 2 START sql table model main.my_first_dbt_model ........................... [RUN]
+[0m15:47:01.628501 [debug] [Thread-1  ]: Acquiring new duckdb connection 'model.nova_dbt.my_first_dbt_model'
+[0m15:47:01.629501 [debug] [Thread-1  ]: Began compiling node model.nova_dbt.my_first_dbt_model
+[0m15:47:01.635514 [debug] [Thread-1  ]: Writing injected SQL for node "model.nova_dbt.my_first_dbt_model"
+[0m15:47:01.639504 [debug] [Thread-1  ]: Began executing node model.nova_dbt.my_first_dbt_model
+[0m15:47:01.664516 [debug] [Thread-1  ]: Writing runtime sql for node "model.nova_dbt.my_first_dbt_model"
+[0m15:47:01.667501 [debug] [Thread-1  ]: Using duckdb connection "model.nova_dbt.my_first_dbt_model"
+[0m15:47:01.667501 [debug] [Thread-1  ]: On model.nova_dbt.my_first_dbt_model: BEGIN
+[0m15:47:01.668498 [debug] [Thread-1  ]: Opening a new connection, currently in state init
+[0m15:47:01.669498 [debug] [Thread-1  ]: SQL status: OK in 0.001 seconds
+[0m15:47:01.669498 [debug] [Thread-1  ]: Using duckdb connection "model.nova_dbt.my_first_dbt_model"
+[0m15:47:01.670499 [debug] [Thread-1  ]: On model.nova_dbt.my_first_dbt_model: /* {"app": "dbt", "dbt_version": "1.10.23", "profile_name": "nova_dbt", "target_name": "dev", "node_id": "model.nova_dbt.my_first_dbt_model"} */
+
+  
+    
+    
+
+    create  table
+      "dev"."main"."my_first_dbt_model__dbt_tmp"
+  
+    as (
+      /*
+    Welcome to your first dbt model!
+    Did you know that you can also configure models directly within SQL files?
+    This will override configurations stated in dbt_project.yml
+
+    Try changing "table" to "view" below
+*/
+
+
+
+with source_data as (
+
+    select 1 as id
+    union all
+    select null as id
+
+)
+
+select *
+from source_data
+
+/*
+    Uncomment the line below to remove records with null `id` values
+*/
+
+-- where id is not null
+    );
+  
+  
+[0m15:47:01.671498 [debug] [Thread-1  ]: SQL status: OK in 0.001 seconds
+[0m15:47:01.677500 [debug] [Thread-1  ]: Using duckdb connection "model.nova_dbt.my_first_dbt_model"
+[0m15:47:01.677500 [debug] [Thread-1  ]: On model.nova_dbt.my_first_dbt_model: /* {"app": "dbt", "dbt_version": "1.10.23", "profile_name": "nova_dbt", "target_name": "dev", "node_id": "model.nova_dbt.my_first_dbt_model"} */
+alter table "dev"."main"."my_first_dbt_model__dbt_tmp" rename to "my_first_dbt_model"
+[0m15:47:01.678510 [debug] [Thread-1  ]: SQL status: OK in 0.001 seconds
+[0m15:47:01.687518 [debug] [Thread-1  ]: On model.nova_dbt.my_first_dbt_model: COMMIT
+[0m15:47:01.688537 [debug] [Thread-1  ]: Using duckdb connection "model.nova_dbt.my_first_dbt_model"
+[0m15:47:01.688537 [debug] [Thread-1  ]: On model.nova_dbt.my_first_dbt_model: COMMIT
+[0m15:47:01.692518 [debug] [Thread-1  ]: SQL status: OK in 0.003 seconds
+[0m15:47:01.697065 [debug] [Thread-1  ]: Using duckdb connection "model.nova_dbt.my_first_dbt_model"
+[0m15:47:01.697065 [debug] [Thread-1  ]: On model.nova_dbt.my_first_dbt_model: /* {"app": "dbt", "dbt_version": "1.10.23", "profile_name": "nova_dbt", "target_name": "dev", "node_id": "model.nova_dbt.my_first_dbt_model"} */
+
+      drop table if exists "dev"."main"."my_first_dbt_model__dbt_backup" cascade
+    
+[0m15:47:01.698065 [debug] [Thread-1  ]: SQL status: OK in 0.000 seconds
+[0m15:47:01.701046 [debug] [Thread-1  ]: On model.nova_dbt.my_first_dbt_model: Close
+[0m15:47:01.707750 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '36757e58-2597-46fb-81af-fd3b6387ca46', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001968A2E6250>]}
+[0m15:47:01.708750 [info ] [Thread-1  ]: 1 of 2 OK created sql table model main.my_first_dbt_model ...................... [[32mOK[0m in 0.07s]
+[0m15:47:01.709751 [debug] [Thread-1  ]: Finished running node model.nova_dbt.my_first_dbt_model
+[0m15:47:01.710750 [debug] [Thread-1  ]: Began running node model.nova_dbt.my_second_dbt_model
+[0m15:47:01.711751 [info ] [Thread-1  ]: 2 of 2 START sql view model main.my_second_dbt_model ........................... [RUN]
+[0m15:47:01.711751 [debug] [Thread-1  ]: Re-using an available connection from the pool (formerly model.nova_dbt.my_first_dbt_model, now model.nova_dbt.my_second_dbt_model)
+[0m15:47:01.712749 [debug] [Thread-1  ]: Began compiling node model.nova_dbt.my_second_dbt_model
+[0m15:47:01.714750 [debug] [Thread-1  ]: Writing injected SQL for node "model.nova_dbt.my_second_dbt_model"
+[0m15:47:01.716733 [debug] [Thread-1  ]: Began executing node model.nova_dbt.my_second_dbt_model
+[0m15:47:01.730798 [debug] [Thread-1  ]: Writing runtime sql for node "model.nova_dbt.my_second_dbt_model"
+[0m15:47:01.732779 [debug] [Thread-1  ]: Using duckdb connection "model.nova_dbt.my_second_dbt_model"
+[0m15:47:01.732779 [debug] [Thread-1  ]: On model.nova_dbt.my_second_dbt_model: BEGIN
+[0m15:47:01.733798 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m15:47:01.733798 [debug] [Thread-1  ]: SQL status: OK in 0.001 seconds
+[0m15:47:01.734801 [debug] [Thread-1  ]: Using duckdb connection "model.nova_dbt.my_second_dbt_model"
+[0m15:47:01.734801 [debug] [Thread-1  ]: On model.nova_dbt.my_second_dbt_model: /* {"app": "dbt", "dbt_version": "1.10.23", "profile_name": "nova_dbt", "target_name": "dev", "node_id": "model.nova_dbt.my_second_dbt_model"} */
+
+  
+  create view "dev"."main"."my_second_dbt_model__dbt_tmp" as (
+    -- Use the `ref` function to select from other models
+
+select *
+from "dev"."main"."my_first_dbt_model"
+where id = 1
+  );
+
+[0m15:47:01.735799 [debug] [Thread-1  ]: SQL status: OK in 0.000 seconds
+[0m15:47:01.738798 [debug] [Thread-1  ]: Using duckdb connection "model.nova_dbt.my_second_dbt_model"
+[0m15:47:01.738798 [debug] [Thread-1  ]: On model.nova_dbt.my_second_dbt_model: /* {"app": "dbt", "dbt_version": "1.10.23", "profile_name": "nova_dbt", "target_name": "dev", "node_id": "model.nova_dbt.my_second_dbt_model"} */
+alter view "dev"."main"."my_second_dbt_model__dbt_tmp" rename to "my_second_dbt_model"
+[0m15:47:01.740781 [debug] [Thread-1  ]: SQL status: OK in 0.000 seconds
+[0m15:47:01.741780 [debug] [Thread-1  ]: On model.nova_dbt.my_second_dbt_model: COMMIT
+[0m15:47:01.742780 [debug] [Thread-1  ]: Using duckdb connection "model.nova_dbt.my_second_dbt_model"
+[0m15:47:01.742780 [debug] [Thread-1  ]: On model.nova_dbt.my_second_dbt_model: COMMIT
+[0m15:47:01.743779 [debug] [Thread-1  ]: SQL status: OK in 0.001 seconds
+[0m15:47:01.746796 [debug] [Thread-1  ]: Using duckdb connection "model.nova_dbt.my_second_dbt_model"
+[0m15:47:01.746796 [debug] [Thread-1  ]: On model.nova_dbt.my_second_dbt_model: /* {"app": "dbt", "dbt_version": "1.10.23", "profile_name": "nova_dbt", "target_name": "dev", "node_id": "model.nova_dbt.my_second_dbt_model"} */
+
+      drop view if exists "dev"."main"."my_second_dbt_model__dbt_backup" cascade
+    
+[0m15:47:01.747798 [debug] [Thread-1  ]: SQL status: OK in 0.000 seconds
+[0m15:47:01.748798 [debug] [Thread-1  ]: On model.nova_dbt.my_second_dbt_model: Close
+[0m15:47:01.749798 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '36757e58-2597-46fb-81af-fd3b6387ca46', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001968EB1BBE0>]}
+[0m15:47:01.749798 [info ] [Thread-1  ]: 2 of 2 OK created sql view model main.my_second_dbt_model ...................... [[32mOK[0m in 0.04s]
+[0m15:47:01.750799 [debug] [Thread-1  ]: Finished running node model.nova_dbt.my_second_dbt_model
+[0m15:47:01.751798 [debug] [MainThread]: Using duckdb connection "master"
+[0m15:47:01.752798 [debug] [MainThread]: On master: BEGIN
+[0m15:47:01.752798 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m15:47:01.753797 [debug] [MainThread]: SQL status: OK in 0.001 seconds
+[0m15:47:01.753797 [debug] [MainThread]: On master: COMMIT
+[0m15:47:01.754784 [debug] [MainThread]: Using duckdb connection "master"
+[0m15:47:01.754784 [debug] [MainThread]: On master: COMMIT
+[0m15:47:01.755796 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m15:47:01.755796 [debug] [MainThread]: On master: Close
+[0m15:47:01.756796 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m15:47:01.756796 [debug] [MainThread]: Connection 'create_dev_main' was properly closed.
+[0m15:47:01.756796 [debug] [MainThread]: Connection 'list_dev_main' was properly closed.
+[0m15:47:01.757796 [debug] [MainThread]: Connection 'model.nova_dbt.my_second_dbt_model' was properly closed.
+[0m15:47:01.757796 [info ] [MainThread]: 
+[0m15:47:01.758798 [info ] [MainThread]: Finished running 1 table model, 1 view model in 0 hours 0 minutes and 2.30 seconds (2.30s).
+[0m15:47:01.759799 [debug] [MainThread]: Command end result
+[0m15:47:01.776796 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\ERKAN\Desktop\DATA\nova_dbt\target\manifest.json
+[0m15:47:01.778798 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\ERKAN\Desktop\DATA\nova_dbt\target\semantic_manifest.json
+[0m15:47:01.784798 [debug] [MainThread]: Wrote artifact RunExecutionResult to C:\Users\ERKAN\Desktop\DATA\nova_dbt\target\run_results.json
+[0m15:47:01.784798 [info ] [MainThread]: 
+[0m15:47:01.785781 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m15:47:01.785781 [info ] [MainThread]: 
+[0m15:47:01.786784 [info ] [MainThread]: Done. PASS=2 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=2
+[0m15:47:01.787780 [debug] [MainThread]: Command `python -m dbt.cli.main run` succeeded at 15:47:01.787780 after 4.90 seconds
+[0m15:47:01.788796 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001968C298D60>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001968C46BB20>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001968ECE0610>]}
+[0m15:47:01.788796 [debug] [MainThread]: Flushing usage events
+[0m15:47:02.583183 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m16:04:18.705052 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E954668D30>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E9566FB250>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E9566FB0A0>]}
+
+
+============================== 16:04:18.709053 | bbb30939-e2b4-43bb-9fb5-63f199af995d ==============================
+[0m16:04:18.709053 [info ] [MainThread]: Running with dbt=1.10.23
+[0m16:04:18.710053 [debug] [MainThread]: running dbt with arguments {'fail_fast': 'False', 'debug': 'False', 'log_cache_events': 'False', 'send_anonymous_usage_stats': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'cache_selected_only': 'False', 'target_path': 'None', 'log_format': 'default', 'version_check': 'True', 'empty': 'False', 'printer_width': '80', 'quiet': 'False', 'log_path': 'C:\\Users\\ERKAN\\Desktop\\DATA\\nova_dbt\\logs', 'introspect': 'True', 'warn_error': 'None', 'write_json': 'True', 'invocation_command': 'dbt run', 'partial_parse': 'True', 'no_print': 'None', 'static_parser': 'True', 'profiles_dir': 'C:\\Users\\ERKAN\\.dbt', 'use_experimental_parser': 'False', 'use_colors': 'True', 'indirect_selection': 'eager'}
+[0m16:04:18.711069 [info ] [MainThread]: This version of dbt is deprecated and no longer receives regular patches, including for known bugs. We recommend upgrading to a newer supported version of dbt: https://docs.getdbt.com/docs/dbt-versions
+[0m16:04:18.711069 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'deprecated_version_invocation', 'label': 'bbb30939-e2b4-43bb-9fb5-63f199af995d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E954668D30>]}
+[0m16:04:18.924103 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'bbb30939-e2b4-43bb-9fb5-63f199af995d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E9566D25E0>]}
+[0m16:04:18.970675 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'bbb30939-e2b4-43bb-9fb5-63f199af995d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E9567C9EE0>]}
+[0m16:04:18.974675 [info ] [MainThread]: Registered adapter: duckdb=1.10.0
+[0m16:04:19.277656 [debug] [MainThread]: checksum: 2b1352ea083ab2415ad0dbf54db2d1ac6054af1cb939f9d756e37438b9e9a7cf, vars: {}, profile: , target: , version: 1.10.23
+[0m16:04:19.442777 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 1 files added, 0 files changed.
+[0m16:04:19.443778 [debug] [MainThread]: Partial parsing: added file: nova_dbt://models\staging\stg_social_media.sql
+[0m16:04:19.680956 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'bbb30939-e2b4-43bb-9fb5-63f199af995d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E956428EE0>]}
+[0m16:04:19.747478 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\ERKAN\Desktop\DATA\nova_dbt\target\manifest.json
+[0m16:04:19.750483 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\ERKAN\Desktop\DATA\nova_dbt\target\semantic_manifest.json
+[0m16:04:19.771481 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'bbb30939-e2b4-43bb-9fb5-63f199af995d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E956F16FD0>]}
+[0m16:04:19.771481 [info ] [MainThread]: Found 3 models, 4 data tests, 456 macros
+[0m16:04:19.772479 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'bbb30939-e2b4-43bb-9fb5-63f199af995d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E9569C1A30>]}
+[0m16:04:19.773479 [info ] [MainThread]: 
+[0m16:04:19.774486 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m16:04:19.774486 [info ] [MainThread]: 
+[0m16:04:19.775480 [debug] [MainThread]: Acquiring new duckdb connection 'master'
+[0m16:04:19.779479 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_dev'
+[0m16:04:19.867496 [debug] [ThreadPool]: Using duckdb connection "list_dev"
+[0m16:04:19.867496 [debug] [ThreadPool]: On list_dev: /* {"app": "dbt", "dbt_version": "1.10.23", "profile_name": "nova_dbt", "target_name": "dev", "connection_name": "list_dev"} */
+
+    
+    select schema_name
+    from system.information_schema.schemata
+    
+    where lower(catalog_name) = '"dev"'
+    
+  
+  
+[0m16:04:19.867496 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m16:04:19.888480 [debug] [ThreadPool]: SQL status: OK in 0.020 seconds
+[0m16:04:19.889495 [debug] [ThreadPool]: On list_dev: Close
+[0m16:04:19.890481 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_dev, now create_dev_main)
+[0m16:04:19.890481 [debug] [ThreadPool]: Creating schema "database: "dev"
+schema: "main"
+"
+[0m16:04:19.896494 [debug] [ThreadPool]: Using duckdb connection "create_dev_main"
+[0m16:04:19.896494 [debug] [ThreadPool]: On create_dev_main: /* {"app": "dbt", "dbt_version": "1.10.23", "profile_name": "nova_dbt", "target_name": "dev", "connection_name": "create_dev_main"} */
+
+    
+        select type from duckdb_databases()
+        where lower(database_name)='dev'
+        and type='sqlite'
+    
+  
+[0m16:04:19.897497 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m16:04:19.898493 [debug] [ThreadPool]: SQL status: OK in 0.001 seconds
+[0m16:04:19.899494 [debug] [ThreadPool]: Using duckdb connection "create_dev_main"
+[0m16:04:19.899494 [debug] [ThreadPool]: On create_dev_main: BEGIN
+[0m16:04:19.900494 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m16:04:19.900494 [debug] [ThreadPool]: Using duckdb connection "create_dev_main"
+[0m16:04:19.901496 [debug] [ThreadPool]: On create_dev_main: /* {"app": "dbt", "dbt_version": "1.10.23", "profile_name": "nova_dbt", "target_name": "dev", "connection_name": "create_dev_main"} */
+
+    
+    
+        create schema if not exists "dev"."main"
+    
+[0m16:04:19.902478 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m16:04:19.902478 [debug] [ThreadPool]: On create_dev_main: COMMIT
+[0m16:04:19.903494 [debug] [ThreadPool]: Using duckdb connection "create_dev_main"
+[0m16:04:19.903494 [debug] [ThreadPool]: On create_dev_main: COMMIT
+[0m16:04:19.904482 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m16:04:19.904482 [debug] [ThreadPool]: On create_dev_main: Close
+[0m16:04:19.905715 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_dev_main'
+[0m16:04:19.909736 [debug] [ThreadPool]: Using duckdb connection "list_dev_main"
+[0m16:04:19.910738 [debug] [ThreadPool]: On list_dev_main: BEGIN
+[0m16:04:19.910738 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m16:04:19.911720 [debug] [ThreadPool]: SQL status: OK in 0.001 seconds
+[0m16:04:19.912741 [debug] [ThreadPool]: Using duckdb connection "list_dev_main"
+[0m16:04:19.912741 [debug] [ThreadPool]: On list_dev_main: /* {"app": "dbt", "dbt_version": "1.10.23", "profile_name": "nova_dbt", "target_name": "dev", "connection_name": "list_dev_main"} */
+select
+      'dev' as database,
+      table_name as name,
+      table_schema as schema,
+      CASE table_type
+        WHEN 'BASE TABLE' THEN 'table'
+        WHEN 'VIEW' THEN 'view'
+        WHEN 'LOCAL TEMPORARY' THEN 'table'
+        END as type
+    from system.information_schema.tables
+    where lower(table_schema) = 'main'
+    and lower(table_catalog) = 'dev'
+  
+[0m16:04:19.924751 [debug] [ThreadPool]: SQL status: OK in 0.011 seconds
+[0m16:04:19.926747 [debug] [ThreadPool]: On list_dev_main: ROLLBACK
+[0m16:04:19.927746 [debug] [ThreadPool]: Failed to rollback 'list_dev_main'
+[0m16:04:19.927746 [debug] [ThreadPool]: On list_dev_main: Close
+[0m16:04:19.928748 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'bbb30939-e2b4-43bb-9fb5-63f199af995d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E956E1F940>]}
+[0m16:04:19.929746 [debug] [MainThread]: Using duckdb connection "master"
+[0m16:04:19.929746 [debug] [MainThread]: On master: BEGIN
+[0m16:04:19.930749 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m16:04:19.931746 [debug] [MainThread]: SQL status: OK in 0.001 seconds
+[0m16:04:19.931746 [debug] [MainThread]: On master: COMMIT
+[0m16:04:19.932745 [debug] [MainThread]: Using duckdb connection "master"
+[0m16:04:19.932745 [debug] [MainThread]: On master: COMMIT
+[0m16:04:19.933748 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m16:04:19.933748 [debug] [MainThread]: On master: Close
+[0m16:04:19.937749 [debug] [Thread-1  ]: Began running node model.nova_dbt.my_first_dbt_model
+[0m16:04:19.937749 [info ] [Thread-1  ]: 1 of 2 START sql table model main.my_first_dbt_model ........................... [RUN]
+[0m16:04:19.938750 [debug] [Thread-1  ]: Acquiring new duckdb connection 'model.nova_dbt.my_first_dbt_model'
+[0m16:04:19.939757 [debug] [Thread-1  ]: Began compiling node model.nova_dbt.my_first_dbt_model
+[0m16:04:19.945774 [debug] [Thread-1  ]: Writing injected SQL for node "model.nova_dbt.my_first_dbt_model"
+[0m16:04:19.946780 [debug] [Thread-1  ]: Began executing node model.nova_dbt.my_first_dbt_model
+[0m16:04:19.970289 [debug] [Thread-1  ]: Writing runtime sql for node "model.nova_dbt.my_first_dbt_model"
+[0m16:04:19.972291 [debug] [Thread-1  ]: Using duckdb connection "model.nova_dbt.my_first_dbt_model"
+[0m16:04:19.972291 [debug] [Thread-1  ]: On model.nova_dbt.my_first_dbt_model: BEGIN
+[0m16:04:19.973293 [debug] [Thread-1  ]: Opening a new connection, currently in state init
+[0m16:04:19.974308 [debug] [Thread-1  ]: SQL status: OK in 0.001 seconds
+[0m16:04:19.974308 [debug] [Thread-1  ]: Using duckdb connection "model.nova_dbt.my_first_dbt_model"
+[0m16:04:19.974308 [debug] [Thread-1  ]: On model.nova_dbt.my_first_dbt_model: /* {"app": "dbt", "dbt_version": "1.10.23", "profile_name": "nova_dbt", "target_name": "dev", "node_id": "model.nova_dbt.my_first_dbt_model"} */
+
+  
+    
+    
+
+    create  table
+      "dev"."main"."my_first_dbt_model__dbt_tmp"
+  
+    as (
+      /*
+    Welcome to your first dbt model!
+    Did you know that you can also configure models directly within SQL files?
+    This will override configurations stated in dbt_project.yml
+
+    Try changing "table" to "view" below
+*/
+
+
+
+with source_data as (
+
+    select 1 as id
+    union all
+    select null as id
+
+)
+
+select *
+from source_data
+
+/*
+    Uncomment the line below to remove records with null `id` values
+*/
+
+-- where id is not null
+    );
+  
+  
+[0m16:04:19.976290 [debug] [Thread-1  ]: SQL status: OK in 0.001 seconds
+[0m16:04:19.980291 [debug] [Thread-1  ]: Using duckdb connection "model.nova_dbt.my_first_dbt_model"
+[0m16:04:19.980291 [debug] [Thread-1  ]: On model.nova_dbt.my_first_dbt_model: /* {"app": "dbt", "dbt_version": "1.10.23", "profile_name": "nova_dbt", "target_name": "dev", "node_id": "model.nova_dbt.my_first_dbt_model"} */
+
+    SELECT index_name
+    FROM duckdb_indexes()
+    WHERE schema_name = 'main'
+      AND table_name = 'my_first_dbt_model'
+  
+[0m16:04:19.981292 [debug] [Thread-1  ]: SQL status: OK in 0.001 seconds
+[0m16:04:19.983307 [debug] [Thread-1  ]: Using duckdb connection "model.nova_dbt.my_first_dbt_model"
+[0m16:04:19.983307 [debug] [Thread-1  ]: On model.nova_dbt.my_first_dbt_model: /* {"app": "dbt", "dbt_version": "1.10.23", "profile_name": "nova_dbt", "target_name": "dev", "node_id": "model.nova_dbt.my_first_dbt_model"} */
+
+    SELECT COUNT(*) as remaining_indexes
+    FROM duckdb_indexes()
+    WHERE schema_name = 'main'
+      AND table_name = 'my_first_dbt_model'
+  
+[0m16:04:19.984292 [debug] [Thread-1  ]: SQL status: OK in 0.001 seconds
+[0m16:04:19.989292 [debug] [Thread-1  ]: Using duckdb connection "model.nova_dbt.my_first_dbt_model"
+[0m16:04:19.990292 [debug] [Thread-1  ]: On model.nova_dbt.my_first_dbt_model: /* {"app": "dbt", "dbt_version": "1.10.23", "profile_name": "nova_dbt", "target_name": "dev", "node_id": "model.nova_dbt.my_first_dbt_model"} */
+alter table "dev"."main"."my_first_dbt_model" rename to "my_first_dbt_model__dbt_backup"
+[0m16:04:19.991293 [debug] [Thread-1  ]: SQL status: OK in 0.000 seconds
+[0m16:04:19.994291 [debug] [Thread-1  ]: Using duckdb connection "model.nova_dbt.my_first_dbt_model"
+[0m16:04:19.994291 [debug] [Thread-1  ]: On model.nova_dbt.my_first_dbt_model: /* {"app": "dbt", "dbt_version": "1.10.23", "profile_name": "nova_dbt", "target_name": "dev", "node_id": "model.nova_dbt.my_first_dbt_model"} */
+alter table "dev"."main"."my_first_dbt_model__dbt_tmp" rename to "my_first_dbt_model"
+[0m16:04:19.995291 [debug] [Thread-1  ]: SQL status: OK in 0.000 seconds
+[0m16:04:20.005290 [debug] [Thread-1  ]: On model.nova_dbt.my_first_dbt_model: COMMIT
+[0m16:04:20.006292 [debug] [Thread-1  ]: Using duckdb connection "model.nova_dbt.my_first_dbt_model"
+[0m16:04:20.006292 [debug] [Thread-1  ]: On model.nova_dbt.my_first_dbt_model: COMMIT
+[0m16:04:20.009630 [debug] [Thread-1  ]: SQL status: OK in 0.003 seconds
+[0m16:04:20.014653 [debug] [Thread-1  ]: Using duckdb connection "model.nova_dbt.my_first_dbt_model"
+[0m16:04:20.014653 [debug] [Thread-1  ]: On model.nova_dbt.my_first_dbt_model: /* {"app": "dbt", "dbt_version": "1.10.23", "profile_name": "nova_dbt", "target_name": "dev", "node_id": "model.nova_dbt.my_first_dbt_model"} */
+
+      drop table if exists "dev"."main"."my_first_dbt_model__dbt_backup" cascade
+    
+[0m16:04:20.016339 [debug] [Thread-1  ]: SQL status: OK in 0.001 seconds
+[0m16:04:20.018361 [debug] [Thread-1  ]: On model.nova_dbt.my_first_dbt_model: Close
+[0m16:04:20.020364 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'bbb30939-e2b4-43bb-9fb5-63f199af995d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E9567BDB80>]}
+[0m16:04:20.021363 [info ] [Thread-1  ]: 1 of 2 OK created sql table model main.my_first_dbt_model ...................... [[32mOK[0m in 0.08s]
+[0m16:04:20.022364 [debug] [Thread-1  ]: Finished running node model.nova_dbt.my_first_dbt_model
+[0m16:04:20.023364 [debug] [Thread-1  ]: Began running node model.nova_dbt.my_second_dbt_model
+[0m16:04:20.024361 [info ] [Thread-1  ]: 2 of 2 START sql view model main.my_second_dbt_model ........................... [RUN]
+[0m16:04:20.024361 [debug] [Thread-1  ]: Re-using an available connection from the pool (formerly model.nova_dbt.my_first_dbt_model, now model.nova_dbt.my_second_dbt_model)
+[0m16:04:20.025363 [debug] [Thread-1  ]: Began compiling node model.nova_dbt.my_second_dbt_model
+[0m16:04:20.027363 [debug] [Thread-1  ]: Writing injected SQL for node "model.nova_dbt.my_second_dbt_model"
+[0m16:04:20.028363 [debug] [Thread-1  ]: Began executing node model.nova_dbt.my_second_dbt_model
+[0m16:04:20.043345 [debug] [Thread-1  ]: Writing runtime sql for node "model.nova_dbt.my_second_dbt_model"
+[0m16:04:20.044344 [debug] [Thread-1  ]: Using duckdb connection "model.nova_dbt.my_second_dbt_model"
+[0m16:04:20.045344 [debug] [Thread-1  ]: On model.nova_dbt.my_second_dbt_model: BEGIN
+[0m16:04:20.045344 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m16:04:20.046345 [debug] [Thread-1  ]: SQL status: OK in 0.001 seconds
+[0m16:04:20.046345 [debug] [Thread-1  ]: Using duckdb connection "model.nova_dbt.my_second_dbt_model"
+[0m16:04:20.047345 [debug] [Thread-1  ]: On model.nova_dbt.my_second_dbt_model: /* {"app": "dbt", "dbt_version": "1.10.23", "profile_name": "nova_dbt", "target_name": "dev", "node_id": "model.nova_dbt.my_second_dbt_model"} */
+
+  
+  create view "dev"."main"."my_second_dbt_model__dbt_tmp" as (
+    -- Use the `ref` function to select from other models
+
+select *
+from "dev"."main"."my_first_dbt_model"
+where id = 1
+  );
+
+[0m16:04:20.048345 [debug] [Thread-1  ]: SQL status: OK in 0.000 seconds
+[0m16:04:20.051363 [debug] [Thread-1  ]: Using duckdb connection "model.nova_dbt.my_second_dbt_model"
+[0m16:04:20.051363 [debug] [Thread-1  ]: On model.nova_dbt.my_second_dbt_model: /* {"app": "dbt", "dbt_version": "1.10.23", "profile_name": "nova_dbt", "target_name": "dev", "node_id": "model.nova_dbt.my_second_dbt_model"} */
+alter view "dev"."main"."my_second_dbt_model" rename to "my_second_dbt_model__dbt_backup"
+[0m16:04:20.052364 [debug] [Thread-1  ]: SQL status: OK in 0.000 seconds
+[0m16:04:20.055363 [debug] [Thread-1  ]: Using duckdb connection "model.nova_dbt.my_second_dbt_model"
+[0m16:04:20.055363 [debug] [Thread-1  ]: On model.nova_dbt.my_second_dbt_model: /* {"app": "dbt", "dbt_version": "1.10.23", "profile_name": "nova_dbt", "target_name": "dev", "node_id": "model.nova_dbt.my_second_dbt_model"} */
+alter view "dev"."main"."my_second_dbt_model__dbt_tmp" rename to "my_second_dbt_model"
+[0m16:04:20.056364 [debug] [Thread-1  ]: SQL status: OK in 0.000 seconds
+[0m16:04:20.057345 [debug] [Thread-1  ]: On model.nova_dbt.my_second_dbt_model: COMMIT
+[0m16:04:20.058361 [debug] [Thread-1  ]: Using duckdb connection "model.nova_dbt.my_second_dbt_model"
+[0m16:04:20.058361 [debug] [Thread-1  ]: On model.nova_dbt.my_second_dbt_model: COMMIT
+[0m16:04:20.060363 [debug] [Thread-1  ]: SQL status: OK in 0.001 seconds
+[0m16:04:20.062363 [debug] [Thread-1  ]: Using duckdb connection "model.nova_dbt.my_second_dbt_model"
+[0m16:04:20.062363 [debug] [Thread-1  ]: On model.nova_dbt.my_second_dbt_model: /* {"app": "dbt", "dbt_version": "1.10.23", "profile_name": "nova_dbt", "target_name": "dev", "node_id": "model.nova_dbt.my_second_dbt_model"} */
+
+      drop view if exists "dev"."main"."my_second_dbt_model__dbt_backup" cascade
+    
+[0m16:04:20.064363 [debug] [Thread-1  ]: SQL status: OK in 0.001 seconds
+[0m16:04:20.065363 [debug] [Thread-1  ]: On model.nova_dbt.my_second_dbt_model: Close
+[0m16:04:20.065363 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'bbb30939-e2b4-43bb-9fb5-63f199af995d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E9573FED30>]}
+[0m16:04:20.066363 [info ] [Thread-1  ]: 2 of 2 OK created sql view model main.my_second_dbt_model ...................... [[32mOK[0m in 0.04s]
+[0m16:04:20.067344 [debug] [Thread-1  ]: Finished running node model.nova_dbt.my_second_dbt_model
+[0m16:04:20.068355 [debug] [MainThread]: Using duckdb connection "master"
+[0m16:04:20.068355 [debug] [MainThread]: On master: BEGIN
+[0m16:04:20.069346 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m16:04:20.069346 [debug] [MainThread]: SQL status: OK in 0.001 seconds
+[0m16:04:20.070343 [debug] [MainThread]: On master: COMMIT
+[0m16:04:20.070343 [debug] [MainThread]: Using duckdb connection "master"
+[0m16:04:20.071343 [debug] [MainThread]: On master: COMMIT
+[0m16:04:20.071343 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m16:04:20.072343 [debug] [MainThread]: On master: Close
+[0m16:04:20.072343 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m16:04:20.072343 [debug] [MainThread]: Connection 'create_dev_main' was properly closed.
+[0m16:04:20.073344 [debug] [MainThread]: Connection 'list_dev_main' was properly closed.
+[0m16:04:20.073344 [debug] [MainThread]: Connection 'model.nova_dbt.my_second_dbt_model' was properly closed.
+[0m16:04:20.074343 [info ] [MainThread]: 
+[0m16:04:20.074343 [info ] [MainThread]: Finished running 1 table model, 1 view model in 0 hours 0 minutes and 0.30 seconds (0.30s).
+[0m16:04:20.075345 [debug] [MainThread]: Command end result
+[0m16:04:20.091355 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\ERKAN\Desktop\DATA\nova_dbt\target\manifest.json
+[0m16:04:20.094363 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\ERKAN\Desktop\DATA\nova_dbt\target\semantic_manifest.json
+[0m16:04:20.100365 [debug] [MainThread]: Wrote artifact RunExecutionResult to C:\Users\ERKAN\Desktop\DATA\nova_dbt\target\run_results.json
+[0m16:04:20.101350 [info ] [MainThread]: 
+[0m16:04:20.102344 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m16:04:20.102344 [info ] [MainThread]: 
+[0m16:04:20.103365 [info ] [MainThread]: Done. PASS=2 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=2
+[0m16:04:20.104361 [debug] [MainThread]: Command `python -m dbt.cli.main run` succeeded at 16:04:20.104361 after 1.51 seconds
+[0m16:04:20.105363 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E954668D30>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E954ECAD90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E956D709D0>]}
+[0m16:04:20.105363 [debug] [MainThread]: Flushing usage events
+[0m16:04:20.858273 [debug] [MainThread]: An error was encountered while trying to flush usage events
+==================== 2026-10-27T13:55:02.460076Z | 01a17da4-9cb8-7191-8cf2-2d91dbe40747 ====================
+13:55:02.823543 [info ]: 
+==================== Execution Summary =====================
+Finished 'internal' successfully [363ms]
+==================== 2026-10-28T12:47:06.089611Z | 01a1828c-c545-73f2-9ae9-799a93a29310 ====================
+12:47:06.318297 [info ]: 
+==================== Execution Summary =====================
+Finished 'internal' successfully [228ms]
+==================== 2026-10-29T19:50:31.105931Z | 01a18936-c7b2-7c62-9642-19e919c7bc48 ====================
+19:50:31.448669 [info ]: 
+==================== Execution Summary =====================
+Finished 'internal' successfully [342ms]
+[0m23:04:42.100449 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000160F3FB8D00>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000160F603B310>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000160F603B160>]}
+
+
+============================== 23:04:42.104450 | 3f38d5c4-5bdb-46a4-9954-2e107fe686d6 ==============================
+[0m23:04:42.104450 [info ] [MainThread]: Running with dbt=1.10.23
+[0m23:04:42.105449 [debug] [MainThread]: running dbt with arguments {'fail_fast': 'False', 'debug': 'False', 'log_cache_events': 'False', 'send_anonymous_usage_stats': 'True', 'cache_selected_only': 'False', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'log_format': 'default', 'target_path': 'None', 'version_check': 'True', 'empty': 'False', 'printer_width': '80', 'quiet': 'False', 'log_path': 'C:\\Users\\ERKAN\\Desktop\\YUSUF\\DATA\\nova_dbt\\logs', 'introspect': 'True', 'warn_error': 'None', 'write_json': 'True', 'no_print': 'None', 'partial_parse': 'True', 'invocation_command': 'dbt run', 'static_parser': 'True', 'profiles_dir': 'C:\\Users\\ERKAN\\.dbt', 'use_experimental_parser': 'False', 'use_colors': 'True', 'indirect_selection': 'eager'}
+[0m23:04:42.105449 [info ] [MainThread]: This version of dbt is deprecated and no longer receives regular patches, including for known bugs. We recommend upgrading to a newer supported version of dbt: https://docs.getdbt.com/docs/dbt-versions
+[0m23:04:42.106448 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'deprecated_version_invocation', 'label': '3f38d5c4-5bdb-46a4-9954-2e107fe686d6', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000160F3FB8D00>]}
+[0m23:04:42.574502 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '3f38d5c4-5bdb-46a4-9954-2e107fe686d6', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000160F61DA910>]}
+[0m23:04:42.618503 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '3f38d5c4-5bdb-46a4-9954-2e107fe686d6', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000160F6109A00>]}
+[0m23:04:42.637503 [info ] [MainThread]: Registered adapter: duckdb=1.10.0
+[0m23:04:42.989502 [debug] [MainThread]: checksum: 2b1352ea083ab2415ad0dbf54db2d1ac6054af1cb939f9d756e37438b9e9a7cf, vars: {}, profile: , target: , version: 1.10.23
+[0m23:04:43.939025 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 1 files changed.
+[0m23:04:43.940026 [debug] [MainThread]: Partial parsing: updated file: nova_dbt://models\staging\stg_social_media.sql
+[0m23:04:44.167024 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '3f38d5c4-5bdb-46a4-9954-2e107fe686d6', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000160F4D3BAF0>]}
+[0m23:04:44.224024 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\ERKAN\Desktop\YUSUF\DATA\nova_dbt\target\manifest.json
+[0m23:04:44.235025 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\ERKAN\Desktop\YUSUF\DATA\nova_dbt\target\semantic_manifest.json
+[0m23:04:44.484538 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '3f38d5c4-5bdb-46a4-9954-2e107fe686d6', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000160F6132340>]}
+[0m23:04:44.484538 [info ] [MainThread]: Found 3 models, 4 data tests, 456 macros
+[0m23:04:44.485540 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '3f38d5c4-5bdb-46a4-9954-2e107fe686d6', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000160F62BB3A0>]}
+[0m23:04:44.486538 [info ] [MainThread]: 
+[0m23:04:44.487540 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m23:04:44.487540 [info ] [MainThread]: 
+[0m23:04:44.488540 [debug] [MainThread]: Acquiring new duckdb connection 'master'
+[0m23:04:44.492539 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_dev'
+[0m23:04:46.749352 [debug] [ThreadPool]: Using duckdb connection "list_dev"
+[0m23:04:46.750352 [debug] [ThreadPool]: On list_dev: /* {"app": "dbt", "dbt_version": "1.10.23", "profile_name": "nova_dbt", "target_name": "dev", "connection_name": "list_dev"} */
+
+    
+    select schema_name
+    from system.information_schema.schemata
+    
+    where lower(catalog_name) = '"dev"'
+    
+  
+  
+[0m23:04:46.751353 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m23:04:46.784352 [debug] [ThreadPool]: SQL status: OK in 0.033 seconds
+[0m23:04:46.786352 [debug] [ThreadPool]: On list_dev: Close
+[0m23:04:46.786352 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_dev, now create_dev_main)
+[0m23:04:46.787352 [debug] [ThreadPool]: Creating schema "database: "dev"
+schema: "main"
+"
+[0m23:04:46.792352 [debug] [ThreadPool]: Using duckdb connection "create_dev_main"
+[0m23:04:46.792352 [debug] [ThreadPool]: On create_dev_main: /* {"app": "dbt", "dbt_version": "1.10.23", "profile_name": "nova_dbt", "target_name": "dev", "connection_name": "create_dev_main"} */
+
+    
+        select type from duckdb_databases()
+        where lower(database_name)='dev'
+        and type='sqlite'
+    
+  
+[0m23:04:46.793351 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m23:04:46.794353 [debug] [ThreadPool]: SQL status: OK in 0.001 seconds
+[0m23:04:46.795353 [debug] [ThreadPool]: Using duckdb connection "create_dev_main"
+[0m23:04:46.795353 [debug] [ThreadPool]: On create_dev_main: BEGIN
+[0m23:04:46.796353 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m23:04:46.796353 [debug] [ThreadPool]: Using duckdb connection "create_dev_main"
+[0m23:04:46.796353 [debug] [ThreadPool]: On create_dev_main: /* {"app": "dbt", "dbt_version": "1.10.23", "profile_name": "nova_dbt", "target_name": "dev", "connection_name": "create_dev_main"} */
+
+    
+    
+        create schema if not exists "dev"."main"
+    
+[0m23:04:46.797353 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m23:04:46.798352 [debug] [ThreadPool]: On create_dev_main: COMMIT
+[0m23:04:46.798352 [debug] [ThreadPool]: Using duckdb connection "create_dev_main"
+[0m23:04:46.799352 [debug] [ThreadPool]: On create_dev_main: COMMIT
+[0m23:04:46.799352 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m23:04:46.800356 [debug] [ThreadPool]: On create_dev_main: Close
+[0m23:04:46.801353 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_dev_main'
+[0m23:04:46.805356 [debug] [ThreadPool]: Using duckdb connection "list_dev_main"
+[0m23:04:46.806356 [debug] [ThreadPool]: On list_dev_main: BEGIN
+[0m23:04:46.806356 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m23:04:46.807356 [debug] [ThreadPool]: SQL status: OK in 0.001 seconds
+[0m23:04:46.807356 [debug] [ThreadPool]: Using duckdb connection "list_dev_main"
+[0m23:04:46.808353 [debug] [ThreadPool]: On list_dev_main: /* {"app": "dbt", "dbt_version": "1.10.23", "profile_name": "nova_dbt", "target_name": "dev", "connection_name": "list_dev_main"} */
+select
+      'dev' as database,
+      table_name as name,
+      table_schema as schema,
+      CASE table_type
+        WHEN 'BASE TABLE' THEN 'table'
+        WHEN 'VIEW' THEN 'view'
+        WHEN 'LOCAL TEMPORARY' THEN 'table'
+        END as type
+    from system.information_schema.tables
+    where lower(table_schema) = 'main'
+    and lower(table_catalog) = 'dev'
+  
+[0m23:04:46.823354 [debug] [ThreadPool]: SQL status: OK in 0.015 seconds
+[0m23:04:46.825353 [debug] [ThreadPool]: On list_dev_main: ROLLBACK
+[0m23:04:46.834355 [debug] [ThreadPool]: Failed to rollback 'list_dev_main'
+[0m23:04:46.834355 [debug] [ThreadPool]: On list_dev_main: Close
+[0m23:04:46.835353 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '3f38d5c4-5bdb-46a4-9954-2e107fe686d6', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000160F6844250>]}
+[0m23:04:46.836353 [debug] [MainThread]: Using duckdb connection "master"
+[0m23:04:46.836353 [debug] [MainThread]: On master: BEGIN
+[0m23:04:46.837354 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m23:04:46.838353 [debug] [MainThread]: SQL status: OK in 0.001 seconds
+[0m23:04:46.838353 [debug] [MainThread]: On master: COMMIT
+[0m23:04:46.838353 [debug] [MainThread]: Using duckdb connection "master"
+[0m23:04:46.839352 [debug] [MainThread]: On master: COMMIT
+[0m23:04:46.840353 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m23:04:46.840353 [debug] [MainThread]: On master: Close
+[0m23:04:46.846353 [debug] [Thread-1  ]: Began running node model.nova_dbt.my_first_dbt_model
+[0m23:04:46.847355 [info ] [Thread-1  ]: 1 of 3 START sql table model main.my_first_dbt_model ........................... [RUN]
+[0m23:04:46.847355 [debug] [Thread-1  ]: Acquiring new duckdb connection 'model.nova_dbt.my_first_dbt_model'
+[0m23:04:46.848356 [debug] [Thread-1  ]: Began compiling node model.nova_dbt.my_first_dbt_model
+[0m23:04:46.854356 [debug] [Thread-1  ]: Writing injected SQL for node "model.nova_dbt.my_first_dbt_model"
+[0m23:04:46.855353 [debug] [Thread-1  ]: Began executing node model.nova_dbt.my_first_dbt_model
+[0m23:04:46.881355 [debug] [Thread-1  ]: Writing runtime sql for node "model.nova_dbt.my_first_dbt_model"
+[0m23:04:46.883355 [debug] [Thread-1  ]: Using duckdb connection "model.nova_dbt.my_first_dbt_model"
+[0m23:04:46.884354 [debug] [Thread-1  ]: On model.nova_dbt.my_first_dbt_model: BEGIN
+[0m23:04:46.885362 [debug] [Thread-1  ]: Opening a new connection, currently in state init
+[0m23:04:46.886354 [debug] [Thread-1  ]: SQL status: OK in 0.001 seconds
+[0m23:04:46.886354 [debug] [Thread-1  ]: Using duckdb connection "model.nova_dbt.my_first_dbt_model"
+[0m23:04:46.887356 [debug] [Thread-1  ]: On model.nova_dbt.my_first_dbt_model: /* {"app": "dbt", "dbt_version": "1.10.23", "profile_name": "nova_dbt", "target_name": "dev", "node_id": "model.nova_dbt.my_first_dbt_model"} */
+
+  
+    
+    
+
+    create  table
+      "dev"."main"."my_first_dbt_model__dbt_tmp"
+  
+    as (
+      /*
+    Welcome to your first dbt model!
+    Did you know that you can also configure models directly within SQL files?
+    This will override configurations stated in dbt_project.yml
+
+    Try changing "table" to "view" below
+*/
+
+
+
+with source_data as (
+
+    select 1 as id
+    union all
+    select null as id
+
+)
+
+select *
+from source_data
+
+/*
+    Uncomment the line below to remove records with null `id` values
+*/
+
+-- where id is not null
+    );
+  
+  
+[0m23:04:46.891352 [debug] [Thread-1  ]: SQL status: OK in 0.003 seconds
+[0m23:04:46.896356 [debug] [Thread-1  ]: Using duckdb connection "model.nova_dbt.my_first_dbt_model"
+[0m23:04:46.897357 [debug] [Thread-1  ]: On model.nova_dbt.my_first_dbt_model: /* {"app": "dbt", "dbt_version": "1.10.23", "profile_name": "nova_dbt", "target_name": "dev", "node_id": "model.nova_dbt.my_first_dbt_model"} */
+
+    SELECT index_name
+    FROM duckdb_indexes()
+    WHERE schema_name = 'main'
+      AND table_name = 'my_first_dbt_model'
+  
+[0m23:04:46.898352 [debug] [Thread-1  ]: SQL status: OK in 0.001 seconds
+[0m23:04:46.899356 [debug] [Thread-1  ]: Using duckdb connection "model.nova_dbt.my_first_dbt_model"
+[0m23:04:46.900358 [debug] [Thread-1  ]: On model.nova_dbt.my_first_dbt_model: /* {"app": "dbt", "dbt_version": "1.10.23", "profile_name": "nova_dbt", "target_name": "dev", "node_id": "model.nova_dbt.my_first_dbt_model"} */
+
+    SELECT COUNT(*) as remaining_indexes
+    FROM duckdb_indexes()
+    WHERE schema_name = 'main'
+      AND table_name = 'my_first_dbt_model'
+  
+[0m23:04:46.902353 [debug] [Thread-1  ]: SQL status: OK in 0.002 seconds
+[0m23:04:46.907355 [debug] [Thread-1  ]: Using duckdb connection "model.nova_dbt.my_first_dbt_model"
+[0m23:04:46.908356 [debug] [Thread-1  ]: On model.nova_dbt.my_first_dbt_model: /* {"app": "dbt", "dbt_version": "1.10.23", "profile_name": "nova_dbt", "target_name": "dev", "node_id": "model.nova_dbt.my_first_dbt_model"} */
+alter table "dev"."main"."my_first_dbt_model" rename to "my_first_dbt_model__dbt_backup"
+[0m23:04:46.909352 [debug] [Thread-1  ]: SQL status: OK in 0.000 seconds
+[0m23:04:46.911352 [debug] [Thread-1  ]: Using duckdb connection "model.nova_dbt.my_first_dbt_model"
+[0m23:04:46.912352 [debug] [Thread-1  ]: On model.nova_dbt.my_first_dbt_model: /* {"app": "dbt", "dbt_version": "1.10.23", "profile_name": "nova_dbt", "target_name": "dev", "node_id": "model.nova_dbt.my_first_dbt_model"} */
+alter table "dev"."main"."my_first_dbt_model__dbt_tmp" rename to "my_first_dbt_model"
+[0m23:04:46.912352 [debug] [Thread-1  ]: SQL status: OK in 0.000 seconds
+[0m23:04:46.922354 [debug] [Thread-1  ]: On model.nova_dbt.my_first_dbt_model: COMMIT
+[0m23:04:46.923355 [debug] [Thread-1  ]: Using duckdb connection "model.nova_dbt.my_first_dbt_model"
+[0m23:04:46.923355 [debug] [Thread-1  ]: On model.nova_dbt.my_first_dbt_model: COMMIT
+[0m23:04:46.926354 [debug] [Thread-1  ]: SQL status: OK in 0.003 seconds
+[0m23:04:46.931352 [debug] [Thread-1  ]: Using duckdb connection "model.nova_dbt.my_first_dbt_model"
+[0m23:04:46.932352 [debug] [Thread-1  ]: On model.nova_dbt.my_first_dbt_model: /* {"app": "dbt", "dbt_version": "1.10.23", "profile_name": "nova_dbt", "target_name": "dev", "node_id": "model.nova_dbt.my_first_dbt_model"} */
+
+      drop table if exists "dev"."main"."my_first_dbt_model__dbt_backup" cascade
+    
+[0m23:04:46.934360 [debug] [Thread-1  ]: SQL status: OK in 0.002 seconds
+[0m23:04:46.936353 [debug] [Thread-1  ]: On model.nova_dbt.my_first_dbt_model: Close
+[0m23:04:46.944356 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '3f38d5c4-5bdb-46a4-9954-2e107fe686d6', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000160F6844250>]}
+[0m23:04:46.944356 [info ] [Thread-1  ]: 1 of 3 OK created sql table model main.my_first_dbt_model ...................... [[32mOK[0m in 0.09s]
+[0m23:04:46.945356 [debug] [Thread-1  ]: Finished running node model.nova_dbt.my_first_dbt_model
+[0m23:04:46.946352 [debug] [Thread-1  ]: Began running node model.nova_dbt.stg_social_media
+[0m23:04:46.946352 [info ] [Thread-1  ]: 2 of 3 START sql view model main.stg_social_media .............................. [RUN]
+[0m23:04:46.947354 [debug] [Thread-1  ]: Re-using an available connection from the pool (formerly model.nova_dbt.my_first_dbt_model, now model.nova_dbt.stg_social_media)
+[0m23:04:46.947354 [debug] [Thread-1  ]: Began compiling node model.nova_dbt.stg_social_media
+[0m23:04:46.949355 [debug] [Thread-1  ]: Writing injected SQL for node "model.nova_dbt.stg_social_media"
+[0m23:04:46.951353 [debug] [Thread-1  ]: Began executing node model.nova_dbt.stg_social_media
+[0m23:04:46.967355 [debug] [Thread-1  ]: Writing runtime sql for node "model.nova_dbt.stg_social_media"
+[0m23:04:46.969356 [debug] [Thread-1  ]: Using duckdb connection "model.nova_dbt.stg_social_media"
+[0m23:04:46.969356 [debug] [Thread-1  ]: On model.nova_dbt.stg_social_media: BEGIN
+[0m23:04:46.970354 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m23:04:46.971354 [debug] [Thread-1  ]: SQL status: OK in 0.001 seconds
+[0m23:04:46.972353 [debug] [Thread-1  ]: Using duckdb connection "model.nova_dbt.stg_social_media"
+[0m23:04:46.973358 [debug] [Thread-1  ]: On model.nova_dbt.stg_social_media: /* {"app": "dbt", "dbt_version": "1.10.23", "profile_name": "nova_dbt", "target_name": "dev", "node_id": "model.nova_dbt.stg_social_media"} */
+
+  
+  create view "dev"."main"."stg_social_media__dbt_tmp" as (
+    with source as (
+    select * from read_csv_auto('../data/Social_media_impact_on_life.csv')
+),
+
+renamed as (
+    select
+        -- Kimlik ve Demografik Bilgiler
+        student_id,
+        age,
+        lower(gender) as gender,
+        lower(academic_level) as academic_level,
+        
+        -- Sosyal Medya Kullanım Alışkanlıkları
+        lower(primary_platform) as primary_platform,
+        daily_usage_hours,
+        weekend_extra_hours,
+        lower(device_type) as device_type,
+        
+        -- Sağlık, Uyku ve Psikolojik Metrikler
+        sleep_duration_hours,
+        sleep_quality_score,
+        late_night_usage,
+        lower(social_comparison_frequency) as social_comparison_frequency,
+        
+        -- Eksik (NULL) verileri güvenli değerlerle doldurma
+        coalesce(perceived_stress_score, 0) as perceived_stress_score,
+        mental_health_index,
+        coalesce(academic_performance_gpa, 0.0) as academic_performance_gpa,
+        
+        lower(overall_impact) as overall_impact
+
+    from source
+)
+
+select * from renamed
+  );
+
+[0m23:04:47.019354 [debug] [Thread-1  ]: SQL status: OK in 0.046 seconds
+[0m23:04:47.024354 [debug] [Thread-1  ]: Using duckdb connection "model.nova_dbt.stg_social_media"
+[0m23:04:47.024354 [debug] [Thread-1  ]: On model.nova_dbt.stg_social_media: /* {"app": "dbt", "dbt_version": "1.10.23", "profile_name": "nova_dbt", "target_name": "dev", "node_id": "model.nova_dbt.stg_social_media"} */
+alter view "dev"."main"."stg_social_media__dbt_tmp" rename to "stg_social_media"
+[0m23:04:47.025357 [debug] [Thread-1  ]: SQL status: OK in 0.001 seconds
+[0m23:04:47.027352 [debug] [Thread-1  ]: On model.nova_dbt.stg_social_media: COMMIT
+[0m23:04:47.027352 [debug] [Thread-1  ]: Using duckdb connection "model.nova_dbt.stg_social_media"
+[0m23:04:47.028359 [debug] [Thread-1  ]: On model.nova_dbt.stg_social_media: COMMIT
+[0m23:04:47.030353 [debug] [Thread-1  ]: SQL status: OK in 0.001 seconds
+[0m23:04:47.033354 [debug] [Thread-1  ]: Using duckdb connection "model.nova_dbt.stg_social_media"
+[0m23:04:47.033354 [debug] [Thread-1  ]: On model.nova_dbt.stg_social_media: /* {"app": "dbt", "dbt_version": "1.10.23", "profile_name": "nova_dbt", "target_name": "dev", "node_id": "model.nova_dbt.stg_social_media"} */
+
+      drop view if exists "dev"."main"."stg_social_media__dbt_backup" cascade
+    
+[0m23:04:47.034356 [debug] [Thread-1  ]: SQL status: OK in 0.000 seconds
+[0m23:04:47.035357 [debug] [Thread-1  ]: On model.nova_dbt.stg_social_media: Close
+[0m23:04:47.036357 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '3f38d5c4-5bdb-46a4-9954-2e107fe686d6', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000160F6844250>]}
+[0m23:04:47.036357 [info ] [Thread-1  ]: 2 of 3 OK created sql view model main.stg_social_media ......................... [[32mOK[0m in 0.09s]
+[0m23:04:47.037358 [debug] [Thread-1  ]: Finished running node model.nova_dbt.stg_social_media
+[0m23:04:47.038356 [debug] [Thread-1  ]: Began running node model.nova_dbt.my_second_dbt_model
+[0m23:04:47.038356 [info ] [Thread-1  ]: 3 of 3 START sql view model main.my_second_dbt_model ........................... [RUN]
+[0m23:04:47.039354 [debug] [Thread-1  ]: Re-using an available connection from the pool (formerly model.nova_dbt.stg_social_media, now model.nova_dbt.my_second_dbt_model)
+[0m23:04:47.040353 [debug] [Thread-1  ]: Began compiling node model.nova_dbt.my_second_dbt_model
+[0m23:04:47.042352 [debug] [Thread-1  ]: Writing injected SQL for node "model.nova_dbt.my_second_dbt_model"
+[0m23:04:47.044353 [debug] [Thread-1  ]: Began executing node model.nova_dbt.my_second_dbt_model
+[0m23:04:47.047356 [debug] [Thread-1  ]: Writing runtime sql for node "model.nova_dbt.my_second_dbt_model"
+[0m23:04:47.048353 [debug] [Thread-1  ]: Using duckdb connection "model.nova_dbt.my_second_dbt_model"
+[0m23:04:47.048353 [debug] [Thread-1  ]: On model.nova_dbt.my_second_dbt_model: BEGIN
+[0m23:04:47.049357 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m23:04:47.050356 [debug] [Thread-1  ]: SQL status: OK in 0.001 seconds
+[0m23:04:47.050356 [debug] [Thread-1  ]: Using duckdb connection "model.nova_dbt.my_second_dbt_model"
+[0m23:04:47.050356 [debug] [Thread-1  ]: On model.nova_dbt.my_second_dbt_model: /* {"app": "dbt", "dbt_version": "1.10.23", "profile_name": "nova_dbt", "target_name": "dev", "node_id": "model.nova_dbt.my_second_dbt_model"} */
+
+  
+  create view "dev"."main"."my_second_dbt_model__dbt_tmp" as (
+    -- Use the `ref` function to select from other models
+
+select *
+from "dev"."main"."my_first_dbt_model"
+where id = 1
+  );
+
+[0m23:04:47.051353 [debug] [Thread-1  ]: SQL status: OK in 0.000 seconds
+[0m23:04:47.054356 [debug] [Thread-1  ]: Using duckdb connection "model.nova_dbt.my_second_dbt_model"
+[0m23:04:47.055357 [debug] [Thread-1  ]: On model.nova_dbt.my_second_dbt_model: /* {"app": "dbt", "dbt_version": "1.10.23", "profile_name": "nova_dbt", "target_name": "dev", "node_id": "model.nova_dbt.my_second_dbt_model"} */
+alter view "dev"."main"."my_second_dbt_model" rename to "my_second_dbt_model__dbt_backup"
+[0m23:04:47.056357 [debug] [Thread-1  ]: SQL status: OK in 0.000 seconds
+[0m23:04:47.059355 [debug] [Thread-1  ]: Using duckdb connection "model.nova_dbt.my_second_dbt_model"
+[0m23:04:47.059355 [debug] [Thread-1  ]: On model.nova_dbt.my_second_dbt_model: /* {"app": "dbt", "dbt_version": "1.10.23", "profile_name": "nova_dbt", "target_name": "dev", "node_id": "model.nova_dbt.my_second_dbt_model"} */
+alter view "dev"."main"."my_second_dbt_model__dbt_tmp" rename to "my_second_dbt_model"
+[0m23:04:47.060357 [debug] [Thread-1  ]: SQL status: OK in 0.000 seconds
+[0m23:04:47.062353 [debug] [Thread-1  ]: On model.nova_dbt.my_second_dbt_model: COMMIT
+[0m23:04:47.064367 [debug] [Thread-1  ]: Using duckdb connection "model.nova_dbt.my_second_dbt_model"
+[0m23:04:47.064367 [debug] [Thread-1  ]: On model.nova_dbt.my_second_dbt_model: COMMIT
+[0m23:04:47.066354 [debug] [Thread-1  ]: SQL status: OK in 0.001 seconds
+[0m23:04:47.070354 [debug] [Thread-1  ]: Using duckdb connection "model.nova_dbt.my_second_dbt_model"
+[0m23:04:47.071355 [debug] [Thread-1  ]: On model.nova_dbt.my_second_dbt_model: /* {"app": "dbt", "dbt_version": "1.10.23", "profile_name": "nova_dbt", "target_name": "dev", "node_id": "model.nova_dbt.my_second_dbt_model"} */
+
+      drop view if exists "dev"."main"."my_second_dbt_model__dbt_backup" cascade
+    
+[0m23:04:47.073355 [debug] [Thread-1  ]: SQL status: OK in 0.001 seconds
+[0m23:04:47.074358 [debug] [Thread-1  ]: On model.nova_dbt.my_second_dbt_model: Close
+[0m23:04:47.075357 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '3f38d5c4-5bdb-46a4-9954-2e107fe686d6', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000160F6D83A60>]}
+[0m23:04:47.076357 [info ] [Thread-1  ]: 3 of 3 OK created sql view model main.my_second_dbt_model ...................... [[32mOK[0m in 0.04s]
+[0m23:04:47.077354 [debug] [Thread-1  ]: Finished running node model.nova_dbt.my_second_dbt_model
+[0m23:04:47.078353 [debug] [MainThread]: Using duckdb connection "master"
+[0m23:04:47.078353 [debug] [MainThread]: On master: BEGIN
+[0m23:04:47.079353 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m23:04:47.079353 [debug] [MainThread]: SQL status: OK in 0.001 seconds
+[0m23:04:47.080354 [debug] [MainThread]: On master: COMMIT
+[0m23:04:47.080354 [debug] [MainThread]: Using duckdb connection "master"
+[0m23:04:47.081353 [debug] [MainThread]: On master: COMMIT
+[0m23:04:47.081353 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m23:04:47.082355 [debug] [MainThread]: On master: Close
+[0m23:04:47.082355 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m23:04:47.083353 [debug] [MainThread]: Connection 'create_dev_main' was properly closed.
+[0m23:04:47.083353 [debug] [MainThread]: Connection 'list_dev_main' was properly closed.
+[0m23:04:47.084353 [debug] [MainThread]: Connection 'model.nova_dbt.my_second_dbt_model' was properly closed.
+[0m23:04:47.084353 [info ] [MainThread]: 
+[0m23:04:47.085358 [info ] [MainThread]: Finished running 1 table model, 2 view models in 0 hours 0 minutes and 2.60 seconds (2.60s).
+[0m23:04:47.086354 [debug] [MainThread]: Command end result
+[0m23:04:47.104352 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\ERKAN\Desktop\YUSUF\DATA\nova_dbt\target\manifest.json
+[0m23:04:47.107354 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\ERKAN\Desktop\YUSUF\DATA\nova_dbt\target\semantic_manifest.json
+[0m23:04:47.113353 [debug] [MainThread]: Wrote artifact RunExecutionResult to C:\Users\ERKAN\Desktop\YUSUF\DATA\nova_dbt\target\run_results.json
+[0m23:04:47.113353 [info ] [MainThread]: 
+[0m23:04:47.114353 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m23:04:47.114353 [info ] [MainThread]: 
+[0m23:04:47.115353 [info ] [MainThread]: Done. PASS=3 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=3
+[0m23:04:47.116353 [debug] [MainThread]: Command `python -m dbt.cli.main run` succeeded at 23:04:47.116353 after 5.09 seconds
+[0m23:04:47.117354 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000160F3FB8D00>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000160F6129370>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000160F67EC790>]}
+[0m23:04:47.117354 [debug] [MainThread]: Flushing usage events
+[0m23:04:47.760388 [debug] [MainThread]: An error was encountered while trying to flush usage events
+==================== 2026-10-30T08:49:35.992600Z | 01a18c00-0cba-77b0-a457-f0def0144823 ====================
+08:49:36.240505 [info ]: 
+==================== Execution Summary =====================
+Finished 'internal' successfully [247ms]
+==================== 2026-10-31T11:07:51.174401Z | 01a191a4-fbde-7ea0-b860-0911b6d14cd4 ====================
+11:07:51.531009 [info ]: 
+==================== Execution Summary =====================
+Finished 'internal' successfully [356ms]
+==================== 2026-10-31T18:54:23.768967Z | 01a19350-1dee-7221-8f28-4710b64ed6ce ====================
+18:54:24.008403 [info ]: 
+==================== Execution Summary =====================
+Finished 'internal' successfully [239ms]
+==================== 2026-10-31T20:33:21.999735Z | 01a193aa-ba4c-7b02-bb98-95a649beebdf ====================
+20:33:22.208611 [info ]: 
+==================== Execution Summary =====================
+Finished 'internal' successfully [208ms]
+==================== 2026-10-31T20:43:13.105226Z | 01a193b3-bf4f-7ee3-b530-995357efbb18 ====================
+20:43:13.308888 [info ]: 
+==================== Execution Summary =====================
+Finished 'internal' successfully [203ms]
+==================== 2026-10-31T20:43:44.352985Z | 01a193b4-395e-72a1-beaf-1858c6c7f7d2 ====================
+20:43:44.555632 [info ]: 
+==================== Execution Summary =====================
+Finished 'internal' successfully [202ms]
+==================== 2026-10-31T20:45:03.696555Z | 01a193b5-6f4e-7333-8e57-a3195669cb1a ====================
+20:45:03.897549 [info ]: 
+==================== Execution Summary =====================
+Finished 'internal' successfully [200ms]
+==================== 2026-11-07T12:09:43.173556Z | 01a1b5ea-2400-7131-8900-1cfd3fd57d4c ====================
+12:09:43.390078 [info ]: 
+==================== Execution Summary =====================
+Finished 'internal' successfully [216ms]
+==================== 2026-11-07T12:17:37.005640Z | 01a1b5f1-5eec-7661-94bb-aa968f1b417e ====================
+12:17:37.199493 [info ]: 
+==================== Execution Summary =====================
+Finished 'internal' successfully [193ms]
+==================== 2026-11-07T12:29:16.149736Z | 01a1b5fc-09f4-7a30-b028-f8e72dd517a1 ====================
+12:29:16.367463 [info ]: 
+==================== Execution Summary =====================
+Finished 'internal' successfully [217ms]
+==================== 2026-11-08T09:38:42.942968Z | 01a1ba86-4063-77f0-b265-8d2e293b372c ====================
+09:38:43.169618 [info ]: 
+==================== Execution Summary =====================
+Finished 'internal' successfully [226ms]
+==================== 2026-11-08T10:08:12.735572Z | 01a1baa1-41be-7413-88d5-70de56f96ecc ====================
+10:08:12.937377 [info ]: 
+==================== Execution Summary =====================
+Finished 'internal' successfully [201ms]
+[0m13:11:13.668999 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000028AA32D8D30>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000028AA533A3D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000028AA533A190>]}
+
+
+============================== 13:11:13.679001 | 91570a82-a161-4bd9-8938-335b2549798e ==============================
+[0m13:11:13.679001 [info ] [MainThread]: Running with dbt=1.10.23
+[0m13:11:13.680003 [debug] [MainThread]: running dbt with arguments {'fail_fast': 'False', 'debug': 'False', 'log_cache_events': 'False', 'send_anonymous_usage_stats': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'cache_selected_only': 'False', 'invocation_command': 'dbt run --profiles-dir .', 'target_path': 'None', 'version_check': 'True', 'empty': 'False', 'printer_width': '80', 'partial_parse': 'True', 'introspect': 'True', 'log_path': 'C:\\Users\\ERKAN\\Desktop\\DATA\\nova_dbt\\logs', 'warn_error': 'None', 'write_json': 'True', 'quiet': 'False', 'no_print': 'None', 'log_format': 'default', 'static_parser': 'True', 'profiles_dir': '.', 'use_experimental_parser': 'False', 'use_colors': 'True', 'indirect_selection': 'eager'}
+[0m13:11:13.680003 [info ] [MainThread]: This version of dbt is deprecated and no longer receives regular patches, including for known bugs. We recommend upgrading to a newer supported version of dbt: https://docs.getdbt.com/docs/dbt-versions
+[0m13:11:13.681000 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'deprecated_version_invocation', 'label': '91570a82-a161-4bd9-8938-335b2549798e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000028AA32D8D30>]}
+[0m13:11:13.682999 [error] [MainThread]: Encountered an error:
+Runtime Error
+  Could not find profile named 'nova_dbt'
+[0m13:11:13.684002 [debug] [MainThread]: Command `python -m dbt.cli.main run` failed at 13:11:13.684002 after 0.09 seconds
+[0m13:11:13.685001 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000028AA32D8D30>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000028AA52CA490>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000028AA52CA670>]}
+[0m13:11:13.685001 [debug] [MainThread]: Flushing usage events
+[0m13:11:14.319028 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m13:14:37.271236 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000014E55CE8CD0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000014E56D4A2B0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000014E56D4A190>]}
+
+
+============================== 13:14:37.274237 | 134c7de3-bed2-4079-8db9-360bf8cc777e ==============================
+[0m13:14:37.274237 [info ] [MainThread]: Running with dbt=1.10.23
+[0m13:14:37.275238 [debug] [MainThread]: running dbt with arguments {'fail_fast': 'False', 'debug': 'False', 'log_cache_events': 'False', 'send_anonymous_usage_stats': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'cache_selected_only': 'False', 'no_print': 'None', 'invocation_command': 'dbt run --profiles-dir .', 'version_check': 'True', 'empty': 'False', 'printer_width': '80', 'quiet': 'False', 'log_path': 'C:\\Users\\ERKAN\\Desktop\\DATA\\nova_dbt\\logs', 'target_path': 'None', 'warn_error': 'None', 'write_json': 'True', 'partial_parse': 'True', 'log_format': 'default', 'introspect': 'True', 'static_parser': 'True', 'profiles_dir': '.', 'use_experimental_parser': 'False', 'use_colors': 'True', 'indirect_selection': 'eager'}
+[0m13:14:37.275238 [info ] [MainThread]: This version of dbt is deprecated and no longer receives regular patches, including for known bugs. We recommend upgrading to a newer supported version of dbt: https://docs.getdbt.com/docs/dbt-versions
+[0m13:14:37.276237 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'deprecated_version_invocation', 'label': '134c7de3-bed2-4079-8db9-360bf8cc777e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000014E55CE8CD0>]}
+[0m13:14:37.753753 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '134c7de3-bed2-4079-8db9-360bf8cc777e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000014E56E72C40>]}
+[0m13:14:37.790751 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '134c7de3-bed2-4079-8db9-360bf8cc777e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000014E56DCED90>]}
+[0m13:14:37.807751 [info ] [MainThread]: Registered adapter: duckdb=1.10.0
+[0m13:14:38.133262 [debug] [MainThread]: checksum: 2b1352ea083ab2415ad0dbf54db2d1ac6054af1cb939f9d756e37438b9e9a7cf, vars: {}, profile: , target: , version: 1.10.23
+[0m13:14:38.977298 [debug] [MainThread]: Partial parsing enabled: 3 files deleted, 3 files added, 0 files changed.
+[0m13:14:38.977298 [debug] [MainThread]: Partial parsing: added file: nova_dbt://models\indermediate\int_student_metrics.sql
+[0m13:14:38.978297 [debug] [MainThread]: Partial parsing: added file: nova_dbt://models\marts\mart_demographic_summary.sql
+[0m13:14:38.978297 [debug] [MainThread]: Partial parsing: added file: nova_dbt://models\marts\mart_platform_impact.sql
+[0m13:14:38.979297 [debug] [MainThread]: Partial parsing: deleted file: nova_dbt://models\example\my_second_dbt_model.sql
+[0m13:14:38.979297 [debug] [MainThread]: Partial parsing: deleted file: nova_dbt://models\example\my_first_dbt_model.sql
+[0m13:14:39.181812 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.nova_dbt.example
+[0m13:14:39.185812 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '134c7de3-bed2-4079-8db9-360bf8cc777e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000014E58465FD0>]}
+[0m13:14:39.239815 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\ERKAN\Desktop\DATA\nova_dbt\target\manifest.json
+[0m13:14:39.252816 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\ERKAN\Desktop\DATA\nova_dbt\target\semantic_manifest.json
+[0m13:14:39.439326 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '134c7de3-bed2-4079-8db9-360bf8cc777e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000014E5801F910>]}
+[0m13:14:39.440326 [info ] [MainThread]: Found 4 models, 456 macros
+[0m13:14:39.440326 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '134c7de3-bed2-4079-8db9-360bf8cc777e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000014E584028E0>]}
+[0m13:14:39.441325 [info ] [MainThread]: 
+[0m13:14:39.442325 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m13:14:39.442325 [info ] [MainThread]: 
+[0m13:14:39.443325 [debug] [MainThread]: Acquiring new duckdb connection 'master'
+[0m13:14:39.446325 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_dev'
+[0m13:14:41.477021 [debug] [ThreadPool]: Using duckdb connection "list_dev"
+[0m13:14:41.478022 [debug] [ThreadPool]: On list_dev: /* {"app": "dbt", "dbt_version": "1.10.23", "profile_name": "nova_dbt", "target_name": "dev", "connection_name": "list_dev"} */
+
+    
+    select schema_name
+    from system.information_schema.schemata
+    
+    where lower(catalog_name) = '"dev"'
+    
+  
+  
+[0m13:14:41.478022 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m13:14:41.511019 [debug] [ThreadPool]: SQL status: OK in 0.032 seconds
+[0m13:14:41.512018 [debug] [ThreadPool]: On list_dev: Close
+[0m13:14:41.513018 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_dev, now create_dev_main)
+[0m13:14:41.514018 [debug] [ThreadPool]: Creating schema "database: "dev"
+schema: "main"
+"
+[0m13:14:41.518020 [debug] [ThreadPool]: Using duckdb connection "create_dev_main"
+[0m13:14:41.519022 [debug] [ThreadPool]: On create_dev_main: /* {"app": "dbt", "dbt_version": "1.10.23", "profile_name": "nova_dbt", "target_name": "dev", "connection_name": "create_dev_main"} */
+
+    
+        select type from duckdb_databases()
+        where lower(database_name)='dev'
+        and type='sqlite'
+    
+  
+[0m13:14:41.519022 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m13:14:41.521023 [debug] [ThreadPool]: SQL status: OK in 0.001 seconds
+[0m13:14:41.522022 [debug] [ThreadPool]: Using duckdb connection "create_dev_main"
+[0m13:14:41.522022 [debug] [ThreadPool]: On create_dev_main: BEGIN
+[0m13:14:41.523021 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m13:14:41.523021 [debug] [ThreadPool]: Using duckdb connection "create_dev_main"
+[0m13:14:41.524019 [debug] [ThreadPool]: On create_dev_main: /* {"app": "dbt", "dbt_version": "1.10.23", "profile_name": "nova_dbt", "target_name": "dev", "connection_name": "create_dev_main"} */
+
+    
+    
+        create schema if not exists "dev"."main"
+    
+[0m13:14:41.525020 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m13:14:41.525020 [debug] [ThreadPool]: On create_dev_main: COMMIT
+[0m13:14:41.526022 [debug] [ThreadPool]: Using duckdb connection "create_dev_main"
+[0m13:14:41.526022 [debug] [ThreadPool]: On create_dev_main: COMMIT
+[0m13:14:41.527019 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m13:14:41.527019 [debug] [ThreadPool]: On create_dev_main: Close
+[0m13:14:41.528019 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_dev_main'
+[0m13:14:41.532018 [debug] [ThreadPool]: Using duckdb connection "list_dev_main"
+[0m13:14:41.532018 [debug] [ThreadPool]: On list_dev_main: BEGIN
+[0m13:14:41.533021 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m13:14:41.533021 [debug] [ThreadPool]: SQL status: OK in 0.001 seconds
+[0m13:14:41.534019 [debug] [ThreadPool]: Using duckdb connection "list_dev_main"
+[0m13:14:41.534019 [debug] [ThreadPool]: On list_dev_main: /* {"app": "dbt", "dbt_version": "1.10.23", "profile_name": "nova_dbt", "target_name": "dev", "connection_name": "list_dev_main"} */
+select
+      'dev' as database,
+      table_name as name,
+      table_schema as schema,
+      CASE table_type
+        WHEN 'BASE TABLE' THEN 'table'
+        WHEN 'VIEW' THEN 'view'
+        WHEN 'LOCAL TEMPORARY' THEN 'table'
+        END as type
+    from system.information_schema.tables
+    where lower(table_schema) = 'main'
+    and lower(table_catalog) = 'dev'
+  
+[0m13:14:41.549018 [debug] [ThreadPool]: SQL status: OK in 0.014 seconds
+[0m13:14:41.550021 [debug] [ThreadPool]: On list_dev_main: ROLLBACK
+[0m13:14:41.559022 [debug] [ThreadPool]: Failed to rollback 'list_dev_main'
+[0m13:14:41.560021 [debug] [ThreadPool]: On list_dev_main: Close
+[0m13:14:41.561018 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '134c7de3-bed2-4079-8db9-360bf8cc777e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000014E58273070>]}
+[0m13:14:41.561018 [debug] [MainThread]: Using duckdb connection "master"
+[0m13:14:41.562019 [debug] [MainThread]: On master: BEGIN
+[0m13:14:41.562019 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m13:14:41.563018 [debug] [MainThread]: SQL status: OK in 0.001 seconds
+[0m13:14:41.563018 [debug] [MainThread]: On master: COMMIT
+[0m13:14:41.563018 [debug] [MainThread]: Using duckdb connection "master"
+[0m13:14:41.564018 [debug] [MainThread]: On master: COMMIT
+[0m13:14:41.564018 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m13:14:41.565020 [debug] [MainThread]: On master: Close
+[0m13:14:41.569018 [debug] [Thread-1  ]: Began running node model.nova_dbt.stg_social_media
+[0m13:14:41.569018 [info ] [Thread-1  ]: 1 of 4 START sql view model main.stg_social_media .............................. [RUN]
+[0m13:14:41.570019 [debug] [Thread-1  ]: Acquiring new duckdb connection 'model.nova_dbt.stg_social_media'
+[0m13:14:41.570019 [debug] [Thread-1  ]: Began compiling node model.nova_dbt.stg_social_media
+[0m13:14:41.575018 [debug] [Thread-1  ]: Writing injected SQL for node "model.nova_dbt.stg_social_media"
+[0m13:14:41.576019 [debug] [Thread-1  ]: Began executing node model.nova_dbt.stg_social_media
+[0m13:14:41.598021 [debug] [Thread-1  ]: Writing runtime sql for node "model.nova_dbt.stg_social_media"
+[0m13:14:41.600024 [debug] [Thread-1  ]: Using duckdb connection "model.nova_dbt.stg_social_media"
+[0m13:14:41.600024 [debug] [Thread-1  ]: On model.nova_dbt.stg_social_media: BEGIN
+[0m13:14:41.601022 [debug] [Thread-1  ]: Opening a new connection, currently in state init
+[0m13:14:41.602023 [debug] [Thread-1  ]: SQL status: OK in 0.001 seconds
+[0m13:14:41.602023 [debug] [Thread-1  ]: Using duckdb connection "model.nova_dbt.stg_social_media"
+[0m13:14:41.603019 [debug] [Thread-1  ]: On model.nova_dbt.stg_social_media: /* {"app": "dbt", "dbt_version": "1.10.23", "profile_name": "nova_dbt", "target_name": "dev", "node_id": "model.nova_dbt.stg_social_media"} */
+
+  
+  create view "dev"."main"."stg_social_media__dbt_tmp" as (
+    with source as (
+    select * from read_csv_auto('../data/Social_media_impact_on_life.csv')
+),
+
+renamed as (
+    select
+        -- Kimlik ve Demografik Bilgiler
+        student_id,
+        age,
+        lower(gender) as gender,
+        lower(academic_level) as academic_level,
+        
+        -- Sosyal Medya Kullanım Alışkanlıkları
+        lower(primary_platform) as primary_platform,
+        daily_usage_hours,
+        weekend_extra_hours,
+        lower(device_type) as device_type,
+        
+        -- Sağlık, Uyku ve Psikolojik Metrikler
+        sleep_duration_hours,
+        sleep_quality_score,
+        late_night_usage,
+        lower(social_comparison_frequency) as social_comparison_frequency,
+        
+        -- Eksik (NULL) verileri güvenli değerlerle doldurma
+        coalesce(perceived_stress_score, 0) as perceived_stress_score,
+        mental_health_index,
+        coalesce(academic_performance_gpa, 0.0) as academic_performance_gpa,
+        
+        lower(overall_impact) as overall_impact
+
+    from source
+)
+
+select * from renamed
+  );
+
+[0m13:14:41.644017 [debug] [Thread-1  ]: SQL status: OK in 0.041 seconds
+[0m13:14:41.649020 [debug] [Thread-1  ]: Using duckdb connection "model.nova_dbt.stg_social_media"
+[0m13:14:41.650022 [debug] [Thread-1  ]: On model.nova_dbt.stg_social_media: /* {"app": "dbt", "dbt_version": "1.10.23", "profile_name": "nova_dbt", "target_name": "dev", "node_id": "model.nova_dbt.stg_social_media"} */
+alter view "dev"."main"."stg_social_media" rename to "stg_social_media__dbt_backup"
+[0m13:14:41.650022 [debug] [Thread-1  ]: SQL status: OK in 0.000 seconds
+[0m13:14:41.653018 [debug] [Thread-1  ]: Using duckdb connection "model.nova_dbt.stg_social_media"
+[0m13:14:41.653018 [debug] [Thread-1  ]: On model.nova_dbt.stg_social_media: /* {"app": "dbt", "dbt_version": "1.10.23", "profile_name": "nova_dbt", "target_name": "dev", "node_id": "model.nova_dbt.stg_social_media"} */
+alter view "dev"."main"."stg_social_media__dbt_tmp" rename to "stg_social_media"
+[0m13:14:41.654019 [debug] [Thread-1  ]: SQL status: OK in 0.000 seconds
+[0m13:14:41.662019 [debug] [Thread-1  ]: On model.nova_dbt.stg_social_media: COMMIT
+[0m13:14:41.663018 [debug] [Thread-1  ]: Using duckdb connection "model.nova_dbt.stg_social_media"
+[0m13:14:41.663018 [debug] [Thread-1  ]: On model.nova_dbt.stg_social_media: COMMIT
+[0m13:14:41.666018 [debug] [Thread-1  ]: SQL status: OK in 0.002 seconds
+[0m13:14:41.671019 [debug] [Thread-1  ]: Using duckdb connection "model.nova_dbt.stg_social_media"
+[0m13:14:41.672020 [debug] [Thread-1  ]: On model.nova_dbt.stg_social_media: /* {"app": "dbt", "dbt_version": "1.10.23", "profile_name": "nova_dbt", "target_name": "dev", "node_id": "model.nova_dbt.stg_social_media"} */
+
+      drop view if exists "dev"."main"."stg_social_media__dbt_backup" cascade
+    
+[0m13:14:41.674022 [debug] [Thread-1  ]: SQL status: OK in 0.002 seconds
+[0m13:14:41.676018 [debug] [Thread-1  ]: On model.nova_dbt.stg_social_media: Close
+[0m13:14:41.688020 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '134c7de3-bed2-4079-8db9-360bf8cc777e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000014E56E72E20>]}
+[0m13:14:41.690025 [info ] [Thread-1  ]: 1 of 4 OK created sql view model main.stg_social_media ......................... [[32mOK[0m in 0.11s]
+[0m13:14:41.691020 [debug] [Thread-1  ]: Finished running node model.nova_dbt.stg_social_media
+[0m13:14:41.692019 [debug] [Thread-1  ]: Began running node model.nova_dbt.int_student_metrics
+[0m13:14:41.692019 [info ] [Thread-1  ]: 2 of 4 START sql view model main.int_student_metrics ........................... [RUN]
+[0m13:14:41.693018 [debug] [Thread-1  ]: Re-using an available connection from the pool (formerly model.nova_dbt.stg_social_media, now model.nova_dbt.int_student_metrics)
+[0m13:14:41.694019 [debug] [Thread-1  ]: Began compiling node model.nova_dbt.int_student_metrics
+[0m13:14:41.696019 [debug] [Thread-1  ]: Writing injected SQL for node "model.nova_dbt.int_student_metrics"
+[0m13:14:41.697021 [debug] [Thread-1  ]: Began executing node model.nova_dbt.int_student_metrics
+[0m13:14:41.700021 [debug] [Thread-1  ]: Writing runtime sql for node "model.nova_dbt.int_student_metrics"
+[0m13:14:41.702019 [debug] [Thread-1  ]: Using duckdb connection "model.nova_dbt.int_student_metrics"
+[0m13:14:41.702019 [debug] [Thread-1  ]: On model.nova_dbt.int_student_metrics: BEGIN
+[0m13:14:41.703019 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m13:14:41.704019 [debug] [Thread-1  ]: SQL status: OK in 0.001 seconds
+[0m13:14:41.704019 [debug] [Thread-1  ]: Using duckdb connection "model.nova_dbt.int_student_metrics"
+[0m13:14:41.704019 [debug] [Thread-1  ]: On model.nova_dbt.int_student_metrics: /* {"app": "dbt", "dbt_version": "1.10.23", "profile_name": "nova_dbt", "target_name": "dev", "node_id": "model.nova_dbt.int_student_metrics"} */
+
+  
+  create view "dev"."main"."int_student_metrics__dbt_tmp" as (
+    with staged as (
+    select * from "dev"."main"."stg_social_media"
+),
+
+enriched as (
+    select
+        student_id,
+        age,
+        -- Yaş grupları oluşturma (Dashboard'da kırılım yapmak için harika olur)
+        case 
+            when age < 18 then '18 Yaş Altı'
+            when age between 18 and 20 then '18-20 Yaş'
+            else '21+ Yaş'
+        end as age_group,
+        
+        gender,
+        academic_level,
+        primary_platform,
+        daily_usage_hours,
+        
+        -- Günlük kullanım yoğunluğu sınıflandırması
+        case 
+            when daily_usage_hours > 6 then 'Yüksek Kullanıcı (>6s)'
+            when daily_usage_hours between 3 and 6 then 'Orta Kullanıcı (3-6s)'
+            else 'Düşük Kullanıcı (<3s)'
+        end as usage_category,
+        
+        sleep_duration_hours,
+        sleep_quality_score,
+        perceived_stress_score,
+        mental_health_index,
+        academic_performance_gpa,
+        overall_impact
+
+    from staged
+)
+
+select * from enriched
+  );
+
+[0m13:14:41.730020 [debug] [Thread-1  ]: SQL status: OK in 0.024 seconds
+[0m13:14:41.734021 [debug] [Thread-1  ]: Using duckdb connection "model.nova_dbt.int_student_metrics"
+[0m13:14:41.735018 [debug] [Thread-1  ]: On model.nova_dbt.int_student_metrics: /* {"app": "dbt", "dbt_version": "1.10.23", "profile_name": "nova_dbt", "target_name": "dev", "node_id": "model.nova_dbt.int_student_metrics"} */
+alter view "dev"."main"."int_student_metrics__dbt_tmp" rename to "int_student_metrics"
+[0m13:14:41.736020 [debug] [Thread-1  ]: SQL status: OK in 0.001 seconds
+[0m13:14:41.737019 [debug] [Thread-1  ]: On model.nova_dbt.int_student_metrics: COMMIT
+[0m13:14:41.738020 [debug] [Thread-1  ]: Using duckdb connection "model.nova_dbt.int_student_metrics"
+[0m13:14:41.739025 [debug] [Thread-1  ]: On model.nova_dbt.int_student_metrics: COMMIT
+[0m13:14:41.741028 [debug] [Thread-1  ]: SQL status: OK in 0.002 seconds
+[0m13:14:41.743023 [debug] [Thread-1  ]: Using duckdb connection "model.nova_dbt.int_student_metrics"
+[0m13:14:41.744024 [debug] [Thread-1  ]: On model.nova_dbt.int_student_metrics: /* {"app": "dbt", "dbt_version": "1.10.23", "profile_name": "nova_dbt", "target_name": "dev", "node_id": "model.nova_dbt.int_student_metrics"} */
+
+      drop view if exists "dev"."main"."int_student_metrics__dbt_backup" cascade
+    
+[0m13:14:41.744024 [debug] [Thread-1  ]: SQL status: OK in 0.000 seconds
+[0m13:14:41.745024 [debug] [Thread-1  ]: On model.nova_dbt.int_student_metrics: Close
+[0m13:14:41.746025 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '134c7de3-bed2-4079-8db9-360bf8cc777e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000014E5897A7F0>]}
+[0m13:14:41.747025 [info ] [Thread-1  ]: 2 of 4 OK created sql view model main.int_student_metrics ...................... [[32mOK[0m in 0.05s]
+[0m13:14:41.747025 [debug] [Thread-1  ]: Finished running node model.nova_dbt.int_student_metrics
+[0m13:14:41.748026 [debug] [Thread-1  ]: Began running node model.nova_dbt.mart_demographic_summary
+[0m13:14:41.748026 [info ] [Thread-1  ]: 3 of 4 START sql view model main.mart_demographic_summary ...................... [RUN]
+[0m13:14:41.749025 [debug] [Thread-1  ]: Re-using an available connection from the pool (formerly model.nova_dbt.int_student_metrics, now model.nova_dbt.mart_demographic_summary)
+[0m13:14:41.749025 [debug] [Thread-1  ]: Began compiling node model.nova_dbt.mart_demographic_summary
+[0m13:14:41.752025 [debug] [Thread-1  ]: Writing injected SQL for node "model.nova_dbt.mart_demographic_summary"
+[0m13:14:41.752025 [debug] [Thread-1  ]: Began executing node model.nova_dbt.mart_demographic_summary
+[0m13:14:41.755533 [debug] [Thread-1  ]: Writing runtime sql for node "model.nova_dbt.mart_demographic_summary"
+[0m13:14:41.757537 [debug] [Thread-1  ]: Using duckdb connection "model.nova_dbt.mart_demographic_summary"
+[0m13:14:41.757537 [debug] [Thread-1  ]: On model.nova_dbt.mart_demographic_summary: BEGIN
+[0m13:14:41.758535 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m13:14:41.758535 [debug] [Thread-1  ]: SQL status: OK in 0.001 seconds
+[0m13:14:41.759534 [debug] [Thread-1  ]: Using duckdb connection "model.nova_dbt.mart_demographic_summary"
+[0m13:14:41.759534 [debug] [Thread-1  ]: On model.nova_dbt.mart_demographic_summary: /* {"app": "dbt", "dbt_version": "1.10.23", "profile_name": "nova_dbt", "target_name": "dev", "node_id": "model.nova_dbt.mart_demographic_summary"} */
+
+  
+  create view "dev"."main"."mart_demographic_summary__dbt_tmp" as (
+    with intermediate as (
+    select * from "dev"."main"."int_student_metrics"
+)
+
+select
+    age_group,
+    gender,
+    usage_category,
+    count(student_id) as student_count,
+    round(avg(academic_performance_gpa), 2) as avg_gpa,
+    round(avg(sleep_duration_hours), 2) as avg_sleep_hours
+from intermediate
+group by age_group, gender, usage_category
+  );
+
+[0m13:14:41.787535 [debug] [Thread-1  ]: SQL status: OK in 0.027 seconds
+[0m13:14:41.790534 [debug] [Thread-1  ]: Using duckdb connection "model.nova_dbt.mart_demographic_summary"
+[0m13:14:41.790534 [debug] [Thread-1  ]: On model.nova_dbt.mart_demographic_summary: /* {"app": "dbt", "dbt_version": "1.10.23", "profile_name": "nova_dbt", "target_name": "dev", "node_id": "model.nova_dbt.mart_demographic_summary"} */
+alter view "dev"."main"."mart_demographic_summary__dbt_tmp" rename to "mart_demographic_summary"
+[0m13:14:41.791536 [debug] [Thread-1  ]: SQL status: OK in 0.000 seconds
+[0m13:14:41.792535 [debug] [Thread-1  ]: On model.nova_dbt.mart_demographic_summary: COMMIT
+[0m13:14:41.793533 [debug] [Thread-1  ]: Using duckdb connection "model.nova_dbt.mart_demographic_summary"
+[0m13:14:41.793533 [debug] [Thread-1  ]: On model.nova_dbt.mart_demographic_summary: COMMIT
+[0m13:14:41.795537 [debug] [Thread-1  ]: SQL status: OK in 0.001 seconds
+[0m13:14:41.797537 [debug] [Thread-1  ]: Using duckdb connection "model.nova_dbt.mart_demographic_summary"
+[0m13:14:41.797537 [debug] [Thread-1  ]: On model.nova_dbt.mart_demographic_summary: /* {"app": "dbt", "dbt_version": "1.10.23", "profile_name": "nova_dbt", "target_name": "dev", "node_id": "model.nova_dbt.mart_demographic_summary"} */
+
+      drop view if exists "dev"."main"."mart_demographic_summary__dbt_backup" cascade
+    
+[0m13:14:41.798539 [debug] [Thread-1  ]: SQL status: OK in 0.000 seconds
+[0m13:14:41.799535 [debug] [Thread-1  ]: On model.nova_dbt.mart_demographic_summary: Close
+[0m13:14:41.800537 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '134c7de3-bed2-4079-8db9-360bf8cc777e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000014E56FBA220>]}
+[0m13:14:41.801536 [info ] [Thread-1  ]: 3 of 4 OK created sql view model main.mart_demographic_summary ................. [[32mOK[0m in 0.05s]
+[0m13:14:41.802537 [debug] [Thread-1  ]: Finished running node model.nova_dbt.mart_demographic_summary
+[0m13:14:41.802537 [debug] [Thread-1  ]: Began running node model.nova_dbt.mart_platform_impact
+[0m13:14:41.803536 [info ] [Thread-1  ]: 4 of 4 START sql view model main.mart_platform_impact .......................... [RUN]
+[0m13:14:41.804536 [debug] [Thread-1  ]: Re-using an available connection from the pool (formerly model.nova_dbt.mart_demographic_summary, now model.nova_dbt.mart_platform_impact)
+[0m13:14:41.804536 [debug] [Thread-1  ]: Began compiling node model.nova_dbt.mart_platform_impact
+[0m13:14:41.809535 [debug] [Thread-1  ]: Writing injected SQL for node "model.nova_dbt.mart_platform_impact"
+[0m13:14:41.810535 [debug] [Thread-1  ]: Began executing node model.nova_dbt.mart_platform_impact
+[0m13:14:41.814536 [debug] [Thread-1  ]: Writing runtime sql for node "model.nova_dbt.mart_platform_impact"
+[0m13:14:41.815545 [debug] [Thread-1  ]: Using duckdb connection "model.nova_dbt.mart_platform_impact"
+[0m13:14:41.816542 [debug] [Thread-1  ]: On model.nova_dbt.mart_platform_impact: BEGIN
+[0m13:14:41.817536 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m13:14:41.817536 [debug] [Thread-1  ]: SQL status: OK in 0.001 seconds
+[0m13:14:41.818534 [debug] [Thread-1  ]: Using duckdb connection "model.nova_dbt.mart_platform_impact"
+[0m13:14:41.818534 [debug] [Thread-1  ]: On model.nova_dbt.mart_platform_impact: /* {"app": "dbt", "dbt_version": "1.10.23", "profile_name": "nova_dbt", "target_name": "dev", "node_id": "model.nova_dbt.mart_platform_impact"} */
+
+  
+  create view "dev"."main"."mart_platform_impact__dbt_tmp" as (
+    with intermediate as (
+    select * from "dev"."main"."int_student_metrics"
+)
+
+select
+    primary_platform,
+    count(student_id) as total_students,
+    round(avg(daily_usage_hours), 2) as avg_daily_hours,
+    round(avg(academic_performance_gpa), 2) as avg_gpa,
+    round(avg(perceived_stress_score), 2) as avg_stress_score,
+    round(avg(mental_health_index), 2) as avg_mental_health
+from intermediate
+group by primary_platform
+order by avg_daily_hours desc
+  );
+
+[0m13:14:41.842533 [debug] [Thread-1  ]: SQL status: OK in 0.024 seconds
+[0m13:14:41.846536 [debug] [Thread-1  ]: Using duckdb connection "model.nova_dbt.mart_platform_impact"
+[0m13:14:41.846536 [debug] [Thread-1  ]: On model.nova_dbt.mart_platform_impact: /* {"app": "dbt", "dbt_version": "1.10.23", "profile_name": "nova_dbt", "target_name": "dev", "node_id": "model.nova_dbt.mart_platform_impact"} */
+alter view "dev"."main"."mart_platform_impact__dbt_tmp" rename to "mart_platform_impact"
+[0m13:14:41.847537 [debug] [Thread-1  ]: SQL status: OK in 0.000 seconds
+[0m13:14:41.848535 [debug] [Thread-1  ]: On model.nova_dbt.mart_platform_impact: COMMIT
+[0m13:14:41.849536 [debug] [Thread-1  ]: Using duckdb connection "model.nova_dbt.mart_platform_impact"
+[0m13:14:41.849536 [debug] [Thread-1  ]: On model.nova_dbt.mart_platform_impact: COMMIT
+[0m13:14:41.851534 [debug] [Thread-1  ]: SQL status: OK in 0.001 seconds
+[0m13:14:41.853534 [debug] [Thread-1  ]: Using duckdb connection "model.nova_dbt.mart_platform_impact"
+[0m13:14:41.853534 [debug] [Thread-1  ]: On model.nova_dbt.mart_platform_impact: /* {"app": "dbt", "dbt_version": "1.10.23", "profile_name": "nova_dbt", "target_name": "dev", "node_id": "model.nova_dbt.mart_platform_impact"} */
+
+      drop view if exists "dev"."main"."mart_platform_impact__dbt_backup" cascade
+    
+[0m13:14:41.854535 [debug] [Thread-1  ]: SQL status: OK in 0.000 seconds
+[0m13:14:41.855535 [debug] [Thread-1  ]: On model.nova_dbt.mart_platform_impact: Close
+[0m13:14:41.856534 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '134c7de3-bed2-4079-8db9-360bf8cc777e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000014E58A59A60>]}
+[0m13:14:41.856534 [info ] [Thread-1  ]: 4 of 4 OK created sql view model main.mart_platform_impact ..................... [[32mOK[0m in 0.05s]
+[0m13:14:41.857534 [debug] [Thread-1  ]: Finished running node model.nova_dbt.mart_platform_impact
+[0m13:14:41.858542 [debug] [MainThread]: Using duckdb connection "master"
+[0m13:14:41.858542 [debug] [MainThread]: On master: BEGIN
+[0m13:14:41.859535 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m13:14:41.859535 [debug] [MainThread]: SQL status: OK in 0.001 seconds
+[0m13:14:41.860535 [debug] [MainThread]: On master: COMMIT
+[0m13:14:41.860535 [debug] [MainThread]: Using duckdb connection "master"
+[0m13:14:41.861535 [debug] [MainThread]: On master: COMMIT
+[0m13:14:41.861535 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m13:14:41.862536 [debug] [MainThread]: On master: Close
+[0m13:14:41.863541 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m13:14:41.864539 [debug] [MainThread]: Connection 'create_dev_main' was properly closed.
+[0m13:14:41.864539 [debug] [MainThread]: Connection 'list_dev_main' was properly closed.
+[0m13:14:41.865535 [debug] [MainThread]: Connection 'model.nova_dbt.mart_platform_impact' was properly closed.
+[0m13:14:41.865535 [info ] [MainThread]: 
+[0m13:14:41.866537 [info ] [MainThread]: Finished running 4 view models in 0 hours 0 minutes and 2.42 seconds (2.42s).
+[0m13:14:41.867536 [debug] [MainThread]: Command end result
+[0m13:14:41.888535 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\ERKAN\Desktop\DATA\nova_dbt\target\manifest.json
+[0m13:14:41.891539 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\ERKAN\Desktop\DATA\nova_dbt\target\semantic_manifest.json
+[0m13:14:41.899535 [debug] [MainThread]: Wrote artifact RunExecutionResult to C:\Users\ERKAN\Desktop\DATA\nova_dbt\target\run_results.json
+[0m13:14:41.899535 [info ] [MainThread]: 
+[0m13:14:41.900534 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m13:14:41.900534 [info ] [MainThread]: 
+[0m13:14:41.901534 [info ] [MainThread]: Done. PASS=4 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=4
+[0m13:14:41.902535 [debug] [MainThread]: Command `python -m dbt.cli.main run` succeeded at 13:14:41.902535 after 4.71 seconds
+[0m13:14:41.902535 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000014E55CE8CD0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000014E55EBBDF0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000014E58454790>]}
+[0m13:14:41.903535 [debug] [MainThread]: Flushing usage events
+[0m13:14:42.513561 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m13:16:42.660951 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000027760698D00>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000027762707F70>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000027762707DC0>]}
+
+
+============================== 13:16:42.663950 | cbcf0e41-b444-49a8-b93e-8ada5458fab1 ==============================
+[0m13:16:42.663950 [info ] [MainThread]: Running with dbt=1.10.23
+[0m13:16:42.663950 [debug] [MainThread]: running dbt with arguments {'fail_fast': 'False', 'debug': 'False', 'log_cache_events': 'False', 'send_anonymous_usage_stats': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'cache_selected_only': 'False', 'invocation_command': 'dbt test --profiles-dir .', 'target_path': 'None', 'version_check': 'True', 'empty': 'None', 'printer_width': '80', 'partial_parse': 'True', 'log_path': 'C:\\Users\\ERKAN\\Desktop\\DATA\\nova_dbt\\logs', 'introspect': 'True', 'warn_error': 'None', 'write_json': 'True', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'static_parser': 'True', 'profiles_dir': '.', 'use_experimental_parser': 'False', 'use_colors': 'True', 'indirect_selection': 'eager'}
+[0m13:16:42.664950 [info ] [MainThread]: This version of dbt is deprecated and no longer receives regular patches, including for known bugs. We recommend upgrading to a newer supported version of dbt: https://docs.getdbt.com/docs/dbt-versions
+[0m13:16:42.664950 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'deprecated_version_invocation', 'label': 'cbcf0e41-b444-49a8-b93e-8ada5458fab1', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000027760698D00>]}
+[0m13:16:42.851460 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'cbcf0e41-b444-49a8-b93e-8ada5458fab1', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000277627FF850>]}
+[0m13:16:42.890461 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'cbcf0e41-b444-49a8-b93e-8ada5458fab1', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000277626D0850>]}
+[0m13:16:42.892462 [info ] [MainThread]: Registered adapter: duckdb=1.10.0
+[0m13:16:43.130509 [debug] [MainThread]: checksum: 2b1352ea083ab2415ad0dbf54db2d1ac6054af1cb939f9d756e37438b9e9a7cf, vars: {}, profile: , target: , version: 1.10.23
+[0m13:16:43.239509 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m13:16:43.240509 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m13:16:43.245508 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.nova_dbt.example
+[0m13:16:43.264507 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'cbcf0e41-b444-49a8-b93e-8ada5458fab1', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000027762DA1130>]}
+[0m13:16:43.319021 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\ERKAN\Desktop\DATA\nova_dbt\target\manifest.json
+[0m13:16:43.321022 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\ERKAN\Desktop\DATA\nova_dbt\target\semantic_manifest.json
+[0m13:16:43.409026 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'cbcf0e41-b444-49a8-b93e-8ada5458fab1', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000277628D2A60>]}
+[0m13:16:43.410024 [info ] [MainThread]: Found 4 models, 456 macros
+[0m13:16:43.410024 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'cbcf0e41-b444-49a8-b93e-8ada5458fab1', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000027762D63E80>]}
+[0m13:16:43.411023 [warn ] [MainThread]: Nothing to do. Try checking your model configs and model specification args
+[0m13:16:43.413022 [debug] [MainThread]: Command end result
+[0m13:16:43.427020 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\ERKAN\Desktop\DATA\nova_dbt\target\manifest.json
+[0m13:16:43.429021 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\ERKAN\Desktop\DATA\nova_dbt\target\semantic_manifest.json
+[0m13:16:43.434021 [debug] [MainThread]: Wrote artifact RunExecutionResult to C:\Users\ERKAN\Desktop\DATA\nova_dbt\target\run_results.json
+[0m13:16:43.436020 [debug] [MainThread]: Command `python -m dbt.cli.main test` succeeded at 13:16:43.436020 after 0.86 seconds
+[0m13:16:43.436020 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000027760698D00>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002776014C610>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000277623F1F10>]}
+[0m13:16:43.437021 [debug] [MainThread]: Flushing usage events
+[0m13:16:44.094882 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m13:21:30.062885 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020BE8EB8D90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020BE9F27EE0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020BE9F27D30>]}
+
+
+============================== 13:21:30.065882 | cf4087c1-266a-4faf-95bf-30f486c4b188 ==============================
+[0m13:21:30.065882 [info ] [MainThread]: Running with dbt=1.10.23
+[0m13:21:30.066881 [debug] [MainThread]: running dbt with arguments {'debug': 'False', 'fail_fast': 'False', 'log_cache_events': 'False', 'send_anonymous_usage_stats': 'True', 'cache_selected_only': 'False', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'no_print': 'None', 'target_path': 'None', 'version_check': 'True', 'empty': 'None', 'printer_width': '80', 'quiet': 'False', 'introspect': 'True', 'log_path': 'C:\\Users\\ERKAN\\Desktop\\DATA\\nova_dbt\\logs', 'warn_error': 'None', 'write_json': 'True', 'partial_parse': 'True', 'log_format': 'default', 'invocation_command': 'dbt test --profiles-dir .', 'static_parser': 'True', 'profiles_dir': '.', 'use_experimental_parser': 'False', 'use_colors': 'True', 'indirect_selection': 'eager'}
+[0m13:21:30.067885 [info ] [MainThread]: This version of dbt is deprecated and no longer receives regular patches, including for known bugs. We recommend upgrading to a newer supported version of dbt: https://docs.getdbt.com/docs/dbt-versions
+[0m13:21:30.067885 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'deprecated_version_invocation', 'label': 'cf4087c1-266a-4faf-95bf-30f486c4b188', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020BE8EB8D90>]}
+[0m13:21:30.253881 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'cf4087c1-266a-4faf-95bf-30f486c4b188', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020BEB058250>]}
+[0m13:21:30.298884 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'cf4087c1-266a-4faf-95bf-30f486c4b188', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020BEB100A90>]}
+[0m13:21:30.300886 [info ] [MainThread]: Registered adapter: duckdb=1.10.0
+[0m13:21:30.576910 [debug] [MainThread]: checksum: 2b1352ea083ab2415ad0dbf54db2d1ac6054af1cb939f9d756e37438b9e9a7cf, vars: {}, profile: , target: , version: 1.10.23
+[0m13:21:30.640909 [info ] [MainThread]: Unable to do partial parsing because a project config has changed
+[0m13:21:30.642910 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': 'cf4087c1-266a-4faf-95bf-30f486c4b188', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020BE96DBE20>]}
+[0m13:21:31.341419 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'cf4087c1-266a-4faf-95bf-30f486c4b188', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020BEB6B8EB0>]}
+[0m13:21:31.382418 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\ERKAN\Desktop\DATA\nova_dbt\target\manifest.json
+[0m13:21:31.384417 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\ERKAN\Desktop\DATA\nova_dbt\target\semantic_manifest.json
+[0m13:21:31.405421 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'cf4087c1-266a-4faf-95bf-30f486c4b188', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020BEB842E50>]}
+[0m13:21:31.405421 [info ] [MainThread]: Found 4 models, 456 macros
+[0m13:21:31.406420 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'cf4087c1-266a-4faf-95bf-30f486c4b188', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020BEB6C44F0>]}
+[0m13:21:31.407421 [warn ] [MainThread]: Nothing to do. Try checking your model configs and model specification args
+[0m13:21:31.407421 [debug] [MainThread]: Command end result
+[0m13:21:31.424417 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\ERKAN\Desktop\DATA\nova_dbt\target\manifest.json
+[0m13:21:31.426417 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\ERKAN\Desktop\DATA\nova_dbt\target\semantic_manifest.json
+[0m13:21:31.429416 [debug] [MainThread]: Wrote artifact RunExecutionResult to C:\Users\ERKAN\Desktop\DATA\nova_dbt\target\run_results.json
+[0m13:21:31.430416 [debug] [MainThread]: Command `python -m dbt.cli.main test` succeeded at 13:21:31.430416 after 1.45 seconds
+[0m13:21:31.430416 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020BE8EB8D90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020BEB100A90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020BE908A1C0>]}
+[0m13:21:31.431418 [debug] [MainThread]: Flushing usage events
+[0m13:21:32.036493 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m13:24:00.439064 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E5059E8D30>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E505BE9910>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E506A57E80>]}
+
+
+============================== 13:24:00.442067 | e36bf17b-b043-4d1c-8a3a-75b6f45f3df8 ==============================
+[0m13:24:00.442067 [info ] [MainThread]: Running with dbt=1.10.23
+[0m13:24:00.443063 [debug] [MainThread]: running dbt with arguments {'debug': 'False', 'fail_fast': 'False', 'log_cache_events': 'False', 'send_anonymous_usage_stats': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'cache_selected_only': 'False', 'target_path': 'None', 'log_format': 'default', 'version_check': 'True', 'empty': 'None', 'printer_width': '80', 'quiet': 'False', 'introspect': 'True', 'partial_parse': 'True', 'warn_error': 'None', 'write_json': 'True', 'no_print': 'None', 'invocation_command': 'dbt test --profiles-dir .', 'log_path': 'C:\\Users\\ERKAN\\Desktop\\DATA\\nova_dbt\\logs', 'static_parser': 'True', 'profiles_dir': '.', 'use_experimental_parser': 'False', 'use_colors': 'True', 'indirect_selection': 'eager'}
+[0m13:24:00.443063 [info ] [MainThread]: This version of dbt is deprecated and no longer receives regular patches, including for known bugs. We recommend upgrading to a newer supported version of dbt: https://docs.getdbt.com/docs/dbt-versions
+[0m13:24:00.444064 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'deprecated_version_invocation', 'label': 'e36bf17b-b043-4d1c-8a3a-75b6f45f3df8', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E5059E8D30>]}
+[0m13:24:00.630582 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'e36bf17b-b043-4d1c-8a3a-75b6f45f3df8', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E506B47C70>]}
+[0m13:24:00.668579 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'e36bf17b-b043-4d1c-8a3a-75b6f45f3df8', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E505B92490>]}
+[0m13:24:00.671579 [info ] [MainThread]: Registered adapter: duckdb=1.10.0
+[0m13:24:00.897579 [debug] [MainThread]: checksum: 2b1352ea083ab2415ad0dbf54db2d1ac6054af1cb939f9d756e37438b9e9a7cf, vars: {}, profile: , target: , version: 1.10.23
+[0m13:24:01.015093 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 1 files added, 0 files changed.
+[0m13:24:01.016095 [debug] [MainThread]: Partial parsing: added file: nova_dbt://models\marts\schema.yml
+[0m13:24:01.251244 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'e36bf17b-b043-4d1c-8a3a-75b6f45f3df8', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E5082CD910>]}
+[0m13:24:01.307242 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\ERKAN\Desktop\DATA\nova_dbt\target\manifest.json
+[0m13:24:01.309246 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\ERKAN\Desktop\DATA\nova_dbt\target\semantic_manifest.json
+[0m13:24:01.330242 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'e36bf17b-b043-4d1c-8a3a-75b6f45f3df8', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E5083F5B20>]}
+[0m13:24:01.331243 [info ] [MainThread]: Found 4 models, 3 data tests, 456 macros
+[0m13:24:01.331243 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'e36bf17b-b043-4d1c-8a3a-75b6f45f3df8', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E5083D2EE0>]}
+[0m13:24:01.333245 [info ] [MainThread]: 
+[0m13:24:01.333245 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m13:24:01.333245 [info ] [MainThread]: 
+[0m13:24:01.334242 [debug] [MainThread]: Acquiring new duckdb connection 'master'
+[0m13:24:01.338244 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_dev_main'
+[0m13:24:01.408242 [debug] [ThreadPool]: Using duckdb connection "list_dev_main"
+[0m13:24:01.409242 [debug] [ThreadPool]: On list_dev_main: BEGIN
+[0m13:24:01.409242 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m13:24:01.430242 [debug] [ThreadPool]: SQL status: OK in 0.020 seconds
+[0m13:24:01.430242 [debug] [ThreadPool]: Using duckdb connection "list_dev_main"
+[0m13:24:01.431243 [debug] [ThreadPool]: On list_dev_main: /* {"app": "dbt", "dbt_version": "1.10.23", "profile_name": "nova_dbt", "target_name": "dev", "connection_name": "list_dev_main"} */
+select
+      'dev' as database,
+      table_name as name,
+      table_schema as schema,
+      CASE table_type
+        WHEN 'BASE TABLE' THEN 'table'
+        WHEN 'VIEW' THEN 'view'
+        WHEN 'LOCAL TEMPORARY' THEN 'table'
+        END as type
+    from system.information_schema.tables
+    where lower(table_schema) = 'main'
+    and lower(table_catalog) = 'dev'
+  
+[0m13:24:01.442243 [debug] [ThreadPool]: SQL status: OK in 0.011 seconds
+[0m13:24:01.444242 [debug] [ThreadPool]: On list_dev_main: ROLLBACK
+[0m13:24:01.445242 [debug] [ThreadPool]: Failed to rollback 'list_dev_main'
+[0m13:24:01.445242 [debug] [ThreadPool]: On list_dev_main: Close
+[0m13:24:01.446242 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'e36bf17b-b043-4d1c-8a3a-75b6f45f3df8', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E506B1D160>]}
+[0m13:24:01.447245 [debug] [MainThread]: Using duckdb connection "master"
+[0m13:24:01.447245 [debug] [MainThread]: On master: BEGIN
+[0m13:24:01.448246 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m13:24:01.448246 [debug] [MainThread]: SQL status: OK in 0.001 seconds
+[0m13:24:01.449245 [debug] [MainThread]: On master: COMMIT
+[0m13:24:01.449245 [debug] [MainThread]: Using duckdb connection "master"
+[0m13:24:01.449245 [debug] [MainThread]: On master: COMMIT
+[0m13:24:01.450245 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m13:24:01.450245 [debug] [MainThread]: On master: Close
+[0m13:24:01.453242 [debug] [Thread-1  ]: Began running node test.nova_dbt.not_null_mart_demographic_summary_student_id.ca8be84d14
+[0m13:24:01.453242 [info ] [Thread-1  ]: 1 of 3 START test not_null_mart_demographic_summary_student_id ................. [RUN]
+[0m13:24:01.454242 [debug] [Thread-1  ]: Acquiring new duckdb connection 'test.nova_dbt.not_null_mart_demographic_summary_student_id.ca8be84d14'
+[0m13:24:01.454242 [debug] [Thread-1  ]: Began compiling node test.nova_dbt.not_null_mart_demographic_summary_student_id.ca8be84d14
+[0m13:24:01.470243 [debug] [Thread-1  ]: Writing injected SQL for node "test.nova_dbt.not_null_mart_demographic_summary_student_id.ca8be84d14"
+[0m13:24:01.473243 [debug] [Thread-1  ]: Began executing node test.nova_dbt.not_null_mart_demographic_summary_student_id.ca8be84d14
+[0m13:24:01.488243 [debug] [Thread-1  ]: Writing runtime sql for node "test.nova_dbt.not_null_mart_demographic_summary_student_id.ca8be84d14"
+[0m13:24:01.489244 [debug] [Thread-1  ]: Using duckdb connection "test.nova_dbt.not_null_mart_demographic_summary_student_id.ca8be84d14"
+[0m13:24:01.490244 [debug] [Thread-1  ]: On test.nova_dbt.not_null_mart_demographic_summary_student_id.ca8be84d14: BEGIN
+[0m13:24:01.490244 [debug] [Thread-1  ]: Opening a new connection, currently in state init
+[0m13:24:01.492244 [debug] [Thread-1  ]: SQL status: OK in 0.001 seconds
+[0m13:24:01.492244 [debug] [Thread-1  ]: Using duckdb connection "test.nova_dbt.not_null_mart_demographic_summary_student_id.ca8be84d14"
+[0m13:24:01.493244 [debug] [Thread-1  ]: On test.nova_dbt.not_null_mart_demographic_summary_student_id.ca8be84d14: /* {"app": "dbt", "dbt_version": "1.10.23", "profile_name": "nova_dbt", "target_name": "dev", "node_id": "test.nova_dbt.not_null_mart_demographic_summary_student_id.ca8be84d14"} */
+
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select student_id
+from "dev"."main"."mart_demographic_summary"
+where student_id is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m13:24:01.525249 [debug] [Thread-1  ]: DuckDB adapter: Error running SQL: /* {"app": "dbt", "dbt_version": "1.10.23", "profile_name": "nova_dbt", "target_name": "dev", "node_id": "test.nova_dbt.not_null_mart_demographic_summary_student_id.ca8be84d14"} */
+
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select student_id
+from "dev"."main"."mart_demographic_summary"
+where student_id is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m13:24:01.526249 [debug] [Thread-1  ]: DuckDB adapter: Rolling back transaction.
+[0m13:24:01.527249 [debug] [Thread-1  ]: On test.nova_dbt.not_null_mart_demographic_summary_student_id.ca8be84d14: ROLLBACK
+[0m13:24:01.610757 [debug] [Thread-1  ]: Failed to rollback 'test.nova_dbt.not_null_mart_demographic_summary_student_id.ca8be84d14'
+[0m13:24:01.610757 [debug] [Thread-1  ]: On test.nova_dbt.not_null_mart_demographic_summary_student_id.ca8be84d14: Close
+[0m13:24:01.612756 [debug] [Thread-1  ]: Runtime Error in test not_null_mart_demographic_summary_student_id (models\marts\schema.yml)
+  Binder Error: Referenced column "student_id" not found in FROM clause!
+  Candidate bindings: "student_count"
+  
+  LINE 18: where student_id is null
+                 ^
+[0m13:24:01.613758 [error] [Thread-1  ]: 1 of 3 ERROR not_null_mart_demographic_summary_student_id ...................... [[31mERROR[0m in 0.16s]
+[0m13:24:01.613758 [debug] [Thread-1  ]: Finished running node test.nova_dbt.not_null_mart_demographic_summary_student_id.ca8be84d14
+[0m13:24:01.614757 [debug] [Thread-1  ]: Began running node test.nova_dbt.not_null_mart_platform_impact_student_id.1ada6e387e
+[0m13:24:01.614757 [debug] [Thread-4  ]: Marking all children of 'test.nova_dbt.not_null_mart_demographic_summary_student_id.ca8be84d14' to be skipped because of status 'error'.  Reason: Runtime Error in test not_null_mart_demographic_summary_student_id (models\marts\schema.yml)
+  Binder Error: Referenced column "student_id" not found in FROM clause!
+  Candidate bindings: "student_count"
+  
+  LINE 18: where student_id is null
+                 ^.
+[0m13:24:01.615757 [info ] [Thread-1  ]: 2 of 3 START test not_null_mart_platform_impact_student_id ..................... [RUN]
+[0m13:24:01.615757 [debug] [Thread-1  ]: Re-using an available connection from the pool (formerly test.nova_dbt.not_null_mart_demographic_summary_student_id.ca8be84d14, now test.nova_dbt.not_null_mart_platform_impact_student_id.1ada6e387e)
+[0m13:24:01.616757 [debug] [Thread-1  ]: Began compiling node test.nova_dbt.not_null_mart_platform_impact_student_id.1ada6e387e
+[0m13:24:01.620766 [debug] [Thread-1  ]: Writing injected SQL for node "test.nova_dbt.not_null_mart_platform_impact_student_id.1ada6e387e"
+[0m13:24:01.622757 [debug] [Thread-1  ]: Began executing node test.nova_dbt.not_null_mart_platform_impact_student_id.1ada6e387e
+[0m13:24:01.626755 [debug] [Thread-1  ]: Writing runtime sql for node "test.nova_dbt.not_null_mart_platform_impact_student_id.1ada6e387e"
+[0m13:24:01.627755 [debug] [Thread-1  ]: Using duckdb connection "test.nova_dbt.not_null_mart_platform_impact_student_id.1ada6e387e"
+[0m13:24:01.628755 [debug] [Thread-1  ]: On test.nova_dbt.not_null_mart_platform_impact_student_id.1ada6e387e: BEGIN
+[0m13:24:01.628755 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m13:24:01.629756 [debug] [Thread-1  ]: SQL status: OK in 0.001 seconds
+[0m13:24:01.630755 [debug] [Thread-1  ]: Using duckdb connection "test.nova_dbt.not_null_mart_platform_impact_student_id.1ada6e387e"
+[0m13:24:01.630755 [debug] [Thread-1  ]: On test.nova_dbt.not_null_mart_platform_impact_student_id.1ada6e387e: /* {"app": "dbt", "dbt_version": "1.10.23", "profile_name": "nova_dbt", "target_name": "dev", "node_id": "test.nova_dbt.not_null_mart_platform_impact_student_id.1ada6e387e"} */
+
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select student_id
+from "dev"."main"."mart_platform_impact"
+where student_id is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m13:24:01.657757 [debug] [Thread-1  ]: DuckDB adapter: Error running SQL: /* {"app": "dbt", "dbt_version": "1.10.23", "profile_name": "nova_dbt", "target_name": "dev", "node_id": "test.nova_dbt.not_null_mart_platform_impact_student_id.1ada6e387e"} */
+
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select student_id
+from "dev"."main"."mart_platform_impact"
+where student_id is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m13:24:01.659758 [debug] [Thread-1  ]: DuckDB adapter: Rolling back transaction.
+[0m13:24:01.659758 [debug] [Thread-1  ]: On test.nova_dbt.not_null_mart_platform_impact_student_id.1ada6e387e: ROLLBACK
+[0m13:24:01.661757 [debug] [Thread-1  ]: Failed to rollback 'test.nova_dbt.not_null_mart_platform_impact_student_id.1ada6e387e'
+[0m13:24:01.661757 [debug] [Thread-1  ]: On test.nova_dbt.not_null_mart_platform_impact_student_id.1ada6e387e: Close
+[0m13:24:01.663757 [debug] [Thread-1  ]: Runtime Error in test not_null_mart_platform_impact_student_id (models\marts\schema.yml)
+  Binder Error: Referenced column "student_id" not found in FROM clause!
+  Candidate bindings: "total_students"
+  
+  LINE 18: where student_id is null
+                 ^
+[0m13:24:01.663757 [error] [Thread-1  ]: 2 of 3 ERROR not_null_mart_platform_impact_student_id .......................... [[31mERROR[0m in 0.05s]
+[0m13:24:01.664759 [debug] [Thread-1  ]: Finished running node test.nova_dbt.not_null_mart_platform_impact_student_id.1ada6e387e
+[0m13:24:01.665759 [debug] [Thread-1  ]: Began running node test.nova_dbt.unique_mart_demographic_summary_student_id.717f8f436a
+[0m13:24:01.665759 [debug] [Thread-4  ]: Marking all children of 'test.nova_dbt.not_null_mart_platform_impact_student_id.1ada6e387e' to be skipped because of status 'error'.  Reason: Runtime Error in test not_null_mart_platform_impact_student_id (models\marts\schema.yml)
+  Binder Error: Referenced column "student_id" not found in FROM clause!
+  Candidate bindings: "total_students"
+  
+  LINE 18: where student_id is null
+                 ^.
+[0m13:24:01.666759 [info ] [Thread-1  ]: 3 of 3 START test unique_mart_demographic_summary_student_id ................... [RUN]
+[0m13:24:01.667757 [debug] [Thread-1  ]: Re-using an available connection from the pool (formerly test.nova_dbt.not_null_mart_platform_impact_student_id.1ada6e387e, now test.nova_dbt.unique_mart_demographic_summary_student_id.717f8f436a)
+[0m13:24:01.667757 [debug] [Thread-1  ]: Began compiling node test.nova_dbt.unique_mart_demographic_summary_student_id.717f8f436a
+[0m13:24:01.674757 [debug] [Thread-1  ]: Writing injected SQL for node "test.nova_dbt.unique_mart_demographic_summary_student_id.717f8f436a"
+[0m13:24:01.676757 [debug] [Thread-1  ]: Began executing node test.nova_dbt.unique_mart_demographic_summary_student_id.717f8f436a
+[0m13:24:01.678757 [debug] [Thread-1  ]: Writing runtime sql for node "test.nova_dbt.unique_mart_demographic_summary_student_id.717f8f436a"
+[0m13:24:01.680757 [debug] [Thread-1  ]: Using duckdb connection "test.nova_dbt.unique_mart_demographic_summary_student_id.717f8f436a"
+[0m13:24:01.681761 [debug] [Thread-1  ]: On test.nova_dbt.unique_mart_demographic_summary_student_id.717f8f436a: BEGIN
+[0m13:24:01.681761 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m13:24:01.682762 [debug] [Thread-1  ]: SQL status: OK in 0.001 seconds
+[0m13:24:01.683760 [debug] [Thread-1  ]: Using duckdb connection "test.nova_dbt.unique_mart_demographic_summary_student_id.717f8f436a"
+[0m13:24:01.683760 [debug] [Thread-1  ]: On test.nova_dbt.unique_mart_demographic_summary_student_id.717f8f436a: /* {"app": "dbt", "dbt_version": "1.10.23", "profile_name": "nova_dbt", "target_name": "dev", "node_id": "test.nova_dbt.unique_mart_demographic_summary_student_id.717f8f436a"} */
+
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+select
+    student_id as unique_field,
+    count(*) as n_records
+
+from "dev"."main"."mart_demographic_summary"
+where student_id is not null
+group by student_id
+having count(*) > 1
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m13:24:01.709758 [debug] [Thread-1  ]: DuckDB adapter: Error running SQL: /* {"app": "dbt", "dbt_version": "1.10.23", "profile_name": "nova_dbt", "target_name": "dev", "node_id": "test.nova_dbt.unique_mart_demographic_summary_student_id.717f8f436a"} */
+
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+select
+    student_id as unique_field,
+    count(*) as n_records
+
+from "dev"."main"."mart_demographic_summary"
+where student_id is not null
+group by student_id
+having count(*) > 1
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m13:24:01.710759 [debug] [Thread-1  ]: DuckDB adapter: Rolling back transaction.
+[0m13:24:01.711759 [debug] [Thread-1  ]: On test.nova_dbt.unique_mart_demographic_summary_student_id.717f8f436a: ROLLBACK
+[0m13:24:01.712758 [debug] [Thread-1  ]: Failed to rollback 'test.nova_dbt.unique_mart_demographic_summary_student_id.717f8f436a'
+[0m13:24:01.713758 [debug] [Thread-1  ]: On test.nova_dbt.unique_mart_demographic_summary_student_id.717f8f436a: Close
+[0m13:24:01.714758 [debug] [Thread-1  ]: Runtime Error in test unique_mart_demographic_summary_student_id (models\marts\schema.yml)
+  Binder Error: Referenced column "student_id" not found in FROM clause!
+  Candidate bindings: "student_count"
+  
+  LINE 19: where student_id is not null
+                 ^
+[0m13:24:01.715757 [error] [Thread-1  ]: 3 of 3 ERROR unique_mart_demographic_summary_student_id ........................ [[31mERROR[0m in 0.05s]
+[0m13:24:01.716758 [debug] [Thread-1  ]: Finished running node test.nova_dbt.unique_mart_demographic_summary_student_id.717f8f436a
+[0m13:24:01.716758 [debug] [Thread-4  ]: Marking all children of 'test.nova_dbt.unique_mart_demographic_summary_student_id.717f8f436a' to be skipped because of status 'error'.  Reason: Runtime Error in test unique_mart_demographic_summary_student_id (models\marts\schema.yml)
+  Binder Error: Referenced column "student_id" not found in FROM clause!
+  Candidate bindings: "student_count"
+  
+  LINE 19: where student_id is not null
+                 ^.
+[0m13:24:01.718758 [debug] [MainThread]: Using duckdb connection "master"
+[0m13:24:01.718758 [debug] [MainThread]: On master: BEGIN
+[0m13:24:01.718758 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m13:24:01.719757 [debug] [MainThread]: SQL status: OK in 0.001 seconds
+[0m13:24:01.720761 [debug] [MainThread]: On master: COMMIT
+[0m13:24:01.720761 [debug] [MainThread]: Using duckdb connection "master"
+[0m13:24:01.721758 [debug] [MainThread]: On master: COMMIT
+[0m13:24:01.721758 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m13:24:01.722760 [debug] [MainThread]: On master: Close
+[0m13:24:01.722760 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m13:24:01.722760 [debug] [MainThread]: Connection 'list_dev_main' was properly closed.
+[0m13:24:01.723761 [debug] [MainThread]: Connection 'test.nova_dbt.unique_mart_demographic_summary_student_id.717f8f436a' was properly closed.
+[0m13:24:01.723761 [info ] [MainThread]: 
+[0m13:24:01.724759 [info ] [MainThread]: Finished running 3 data tests in 0 hours 0 minutes and 0.39 seconds (0.39s).
+[0m13:24:01.725764 [debug] [MainThread]: Command end result
+[0m13:24:01.743759 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\ERKAN\Desktop\DATA\nova_dbt\target\manifest.json
+[0m13:24:01.747761 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\ERKAN\Desktop\DATA\nova_dbt\target\semantic_manifest.json
+[0m13:24:01.754759 [debug] [MainThread]: Wrote artifact RunExecutionResult to C:\Users\ERKAN\Desktop\DATA\nova_dbt\target\run_results.json
+[0m13:24:01.755759 [info ] [MainThread]: 
+[0m13:24:01.756760 [info ] [MainThread]: [31mCompleted with 3 errors, 0 partial successes, and 0 warnings:[0m
+[0m13:24:01.757757 [info ] [MainThread]: 
+[0m13:24:01.757757 [error] [MainThread]: [31mFailure in test not_null_mart_demographic_summary_student_id (models\marts\schema.yml)[0m
+[0m13:24:01.758759 [error] [MainThread]:   Runtime Error in test not_null_mart_demographic_summary_student_id (models\marts\schema.yml)
+  Binder Error: Referenced column "student_id" not found in FROM clause!
+  Candidate bindings: "student_count"
+  
+  LINE 18: where student_id is null
+                 ^
+[0m13:24:01.758759 [info ] [MainThread]: 
+[0m13:24:01.758759 [info ] [MainThread]:   compiled code at target\compiled\nova_dbt\models\marts\schema.yml\not_null_mart_demographic_summary_student_id.sql
+[0m13:24:01.759758 [info ] [MainThread]: 
+[0m13:24:01.759758 [error] [MainThread]: [31mFailure in test not_null_mart_platform_impact_student_id (models\marts\schema.yml)[0m
+[0m13:24:01.760758 [error] [MainThread]:   Runtime Error in test not_null_mart_platform_impact_student_id (models\marts\schema.yml)
+  Binder Error: Referenced column "student_id" not found in FROM clause!
+  Candidate bindings: "total_students"
+  
+  LINE 18: where student_id is null
+                 ^
+[0m13:24:01.761758 [info ] [MainThread]: 
+[0m13:24:01.761758 [info ] [MainThread]:   compiled code at target\compiled\nova_dbt\models\marts\schema.yml\not_null_mart_platform_impact_student_id.sql
+[0m13:24:01.762763 [info ] [MainThread]: 
+[0m13:24:01.762763 [error] [MainThread]: [31mFailure in test unique_mart_demographic_summary_student_id (models\marts\schema.yml)[0m
+[0m13:24:01.763758 [error] [MainThread]:   Runtime Error in test unique_mart_demographic_summary_student_id (models\marts\schema.yml)
+  Binder Error: Referenced column "student_id" not found in FROM clause!
+  Candidate bindings: "student_count"
+  
+  LINE 19: where student_id is not null
+                 ^
+[0m13:24:01.763758 [info ] [MainThread]: 
+[0m13:24:01.763758 [info ] [MainThread]:   compiled code at target\compiled\nova_dbt\models\marts\schema.yml\unique_mart_demographic_summary_student_id.sql
+[0m13:24:01.764760 [info ] [MainThread]: 
+[0m13:24:01.764760 [info ] [MainThread]: Done. PASS=0 WARN=0 ERROR=3 SKIP=0 NO-OP=0 TOTAL=3
+[0m13:24:01.765760 [debug] [MainThread]: Command `python -m dbt.cli.main test` failed at 13:24:01.765760 after 1.40 seconds
+[0m13:24:01.766762 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E5059E8D30>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E5083F7190>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E5083F7160>]}
+[0m13:24:01.766762 [debug] [MainThread]: Flushing usage events
+[0m13:24:02.353315 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m13:26:18.708652 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000013CF3458D30>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000013CF3659910>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000013CF54C7E80>]}
+
+
+============================== 13:26:18.712152 | 730a0511-cdf8-4a9d-8799-ea10c46bd5a6 ==============================
+[0m13:26:18.712152 [info ] [MainThread]: Running with dbt=1.10.23
+[0m13:26:18.713158 [debug] [MainThread]: running dbt with arguments {'debug': 'False', 'fail_fast': 'False', 'log_cache_events': 'False', 'send_anonymous_usage_stats': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'cache_selected_only': 'False', 'no_print': 'None', 'invocation_command': 'dbt test --profiles-dir .', 'version_check': 'True', 'empty': 'None', 'printer_width': '80', 'quiet': 'False', 'introspect': 'True', 'log_format': 'default', 'warn_error': 'None', 'write_json': 'True', 'partial_parse': 'True', 'target_path': 'None', 'log_path': 'C:\\Users\\ERKAN\\Desktop\\DATA\\nova_dbt\\logs', 'static_parser': 'True', 'profiles_dir': '.', 'use_experimental_parser': 'False', 'use_colors': 'True', 'indirect_selection': 'eager'}
+[0m13:26:18.713158 [info ] [MainThread]: This version of dbt is deprecated and no longer receives regular patches, including for known bugs. We recommend upgrading to a newer supported version of dbt: https://docs.getdbt.com/docs/dbt-versions
+[0m13:26:18.714158 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'deprecated_version_invocation', 'label': '730a0511-cdf8-4a9d-8799-ea10c46bd5a6', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000013CF3458D30>]}
+[0m13:26:18.909704 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '730a0511-cdf8-4a9d-8799-ea10c46bd5a6', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000013CF55B7C70>]}
+[0m13:26:18.950226 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '730a0511-cdf8-4a9d-8799-ea10c46bd5a6', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000013CF3602490>]}
+[0m13:26:18.953227 [info ] [MainThread]: Registered adapter: duckdb=1.10.0
+[0m13:26:19.220430 [debug] [MainThread]: checksum: 2b1352ea083ab2415ad0dbf54db2d1ac6054af1cb939f9d756e37438b9e9a7cf, vars: {}, profile: , target: , version: 1.10.23
+[0m13:26:19.355428 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 1 files changed.
+[0m13:26:19.356428 [debug] [MainThread]: Partial parsing: updated file: nova_dbt://models\marts\schema.yml
+[0m13:26:19.657940 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '730a0511-cdf8-4a9d-8799-ea10c46bd5a6', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000013CF5E50130>]}
+[0m13:26:19.708941 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\ERKAN\Desktop\DATA\nova_dbt\target\manifest.json
+[0m13:26:19.710943 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\ERKAN\Desktop\DATA\nova_dbt\target\semantic_manifest.json
+[0m13:26:19.731945 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '730a0511-cdf8-4a9d-8799-ea10c46bd5a6', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000013CF5F95FD0>]}
+[0m13:26:19.732939 [info ] [MainThread]: Found 4 models, 2 data tests, 456 macros
+[0m13:26:19.732939 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '730a0511-cdf8-4a9d-8799-ea10c46bd5a6', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000013CF5DE7E20>]}
+[0m13:26:19.734940 [info ] [MainThread]: 
+[0m13:26:19.734940 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m13:26:19.735940 [info ] [MainThread]: 
+[0m13:26:19.736940 [debug] [MainThread]: Acquiring new duckdb connection 'master'
+[0m13:26:19.739942 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_dev_main'
+[0m13:26:19.816940 [debug] [ThreadPool]: Using duckdb connection "list_dev_main"
+[0m13:26:19.816940 [debug] [ThreadPool]: On list_dev_main: BEGIN
+[0m13:26:19.817941 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m13:26:19.829940 [debug] [ThreadPool]: SQL status: OK in 0.012 seconds
+[0m13:26:19.830940 [debug] [ThreadPool]: Using duckdb connection "list_dev_main"
+[0m13:26:19.831941 [debug] [ThreadPool]: On list_dev_main: /* {"app": "dbt", "dbt_version": "1.10.23", "profile_name": "nova_dbt", "target_name": "dev", "connection_name": "list_dev_main"} */
+select
+      'dev' as database,
+      table_name as name,
+      table_schema as schema,
+      CASE table_type
+        WHEN 'BASE TABLE' THEN 'table'
+        WHEN 'VIEW' THEN 'view'
+        WHEN 'LOCAL TEMPORARY' THEN 'table'
+        END as type
+    from system.information_schema.tables
+    where lower(table_schema) = 'main'
+    and lower(table_catalog) = 'dev'
+  
+[0m13:26:19.842941 [debug] [ThreadPool]: SQL status: OK in 0.011 seconds
+[0m13:26:19.844939 [debug] [ThreadPool]: On list_dev_main: ROLLBACK
+[0m13:26:19.844939 [debug] [ThreadPool]: Failed to rollback 'list_dev_main'
+[0m13:26:19.845940 [debug] [ThreadPool]: On list_dev_main: Close
+[0m13:26:19.846942 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '730a0511-cdf8-4a9d-8799-ea10c46bd5a6', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000013CF5F95D00>]}
+[0m13:26:19.846942 [debug] [MainThread]: Using duckdb connection "master"
+[0m13:26:19.847940 [debug] [MainThread]: On master: BEGIN
+[0m13:26:19.847940 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m13:26:19.847940 [debug] [MainThread]: SQL status: OK in 0.001 seconds
+[0m13:26:19.848940 [debug] [MainThread]: On master: COMMIT
+[0m13:26:19.848940 [debug] [MainThread]: Using duckdb connection "master"
+[0m13:26:19.848940 [debug] [MainThread]: On master: COMMIT
+[0m13:26:19.849940 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m13:26:19.849940 [debug] [MainThread]: On master: Close
+[0m13:26:19.852940 [debug] [Thread-1  ]: Began running node test.nova_dbt.not_null_mart_demographic_summary_gender.85d5bb67e3
+[0m13:26:19.852940 [info ] [Thread-1  ]: 1 of 2 START test not_null_mart_demographic_summary_gender ..................... [RUN]
+[0m13:26:19.853940 [debug] [Thread-1  ]: Acquiring new duckdb connection 'test.nova_dbt.not_null_mart_demographic_summary_gender.85d5bb67e3'
+[0m13:26:19.853940 [debug] [Thread-1  ]: Began compiling node test.nova_dbt.not_null_mart_demographic_summary_gender.85d5bb67e3
+[0m13:26:19.868939 [debug] [Thread-1  ]: Writing injected SQL for node "test.nova_dbt.not_null_mart_demographic_summary_gender.85d5bb67e3"
+[0m13:26:19.869940 [debug] [Thread-1  ]: Began executing node test.nova_dbt.not_null_mart_demographic_summary_gender.85d5bb67e3
+[0m13:26:19.883938 [debug] [Thread-1  ]: Writing runtime sql for node "test.nova_dbt.not_null_mart_demographic_summary_gender.85d5bb67e3"
+[0m13:26:19.884938 [debug] [Thread-1  ]: Using duckdb connection "test.nova_dbt.not_null_mart_demographic_summary_gender.85d5bb67e3"
+[0m13:26:19.885938 [debug] [Thread-1  ]: On test.nova_dbt.not_null_mart_demographic_summary_gender.85d5bb67e3: BEGIN
+[0m13:26:19.885938 [debug] [Thread-1  ]: Opening a new connection, currently in state init
+[0m13:26:19.886938 [debug] [Thread-1  ]: SQL status: OK in 0.001 seconds
+[0m13:26:19.887939 [debug] [Thread-1  ]: Using duckdb connection "test.nova_dbt.not_null_mart_demographic_summary_gender.85d5bb67e3"
+[0m13:26:19.887939 [debug] [Thread-1  ]: On test.nova_dbt.not_null_mart_demographic_summary_gender.85d5bb67e3: /* {"app": "dbt", "dbt_version": "1.10.23", "profile_name": "nova_dbt", "target_name": "dev", "node_id": "test.nova_dbt.not_null_mart_demographic_summary_gender.85d5bb67e3"} */
+
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select gender
+from "dev"."main"."mart_demographic_summary"
+where gender is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m13:26:19.924943 [debug] [Thread-1  ]: SQL status: OK in 0.036 seconds
+[0m13:26:19.929447 [debug] [Thread-1  ]: On test.nova_dbt.not_null_mart_demographic_summary_gender.85d5bb67e3: ROLLBACK
+[0m13:26:19.929447 [debug] [Thread-1  ]: Failed to rollback 'test.nova_dbt.not_null_mart_demographic_summary_gender.85d5bb67e3'
+[0m13:26:19.930452 [debug] [Thread-1  ]: On test.nova_dbt.not_null_mart_demographic_summary_gender.85d5bb67e3: Close
+[0m13:26:19.931452 [info ] [Thread-1  ]: 1 of 2 PASS not_null_mart_demographic_summary_gender ........................... [[32mPASS[0m in 0.08s]
+[0m13:26:19.931452 [debug] [Thread-1  ]: Finished running node test.nova_dbt.not_null_mart_demographic_summary_gender.85d5bb67e3
+[0m13:26:19.932451 [debug] [Thread-1  ]: Began running node test.nova_dbt.not_null_mart_platform_impact_total_students.39112277dc
+[0m13:26:19.932451 [info ] [Thread-1  ]: 2 of 2 START test not_null_mart_platform_impact_total_students ................. [RUN]
+[0m13:26:19.933452 [debug] [Thread-1  ]: Re-using an available connection from the pool (formerly test.nova_dbt.not_null_mart_demographic_summary_gender.85d5bb67e3, now test.nova_dbt.not_null_mart_platform_impact_total_students.39112277dc)
+[0m13:26:19.933452 [debug] [Thread-1  ]: Began compiling node test.nova_dbt.not_null_mart_platform_impact_total_students.39112277dc
+[0m13:26:19.936451 [debug] [Thread-1  ]: Writing injected SQL for node "test.nova_dbt.not_null_mart_platform_impact_total_students.39112277dc"
+[0m13:26:19.937450 [debug] [Thread-1  ]: Began executing node test.nova_dbt.not_null_mart_platform_impact_total_students.39112277dc
+[0m13:26:19.940450 [debug] [Thread-1  ]: Writing runtime sql for node "test.nova_dbt.not_null_mart_platform_impact_total_students.39112277dc"
+[0m13:26:19.941450 [debug] [Thread-1  ]: Using duckdb connection "test.nova_dbt.not_null_mart_platform_impact_total_students.39112277dc"
+[0m13:26:19.942453 [debug] [Thread-1  ]: On test.nova_dbt.not_null_mart_platform_impact_total_students.39112277dc: BEGIN
+[0m13:26:19.942453 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m13:26:19.943452 [debug] [Thread-1  ]: SQL status: OK in 0.001 seconds
+[0m13:26:19.943452 [debug] [Thread-1  ]: Using duckdb connection "test.nova_dbt.not_null_mart_platform_impact_total_students.39112277dc"
+[0m13:26:19.944451 [debug] [Thread-1  ]: On test.nova_dbt.not_null_mart_platform_impact_total_students.39112277dc: /* {"app": "dbt", "dbt_version": "1.10.23", "profile_name": "nova_dbt", "target_name": "dev", "node_id": "test.nova_dbt.not_null_mart_platform_impact_total_students.39112277dc"} */
+
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select total_students
+from "dev"."main"."mart_platform_impact"
+where total_students is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m13:26:19.977451 [debug] [Thread-1  ]: SQL status: OK in 0.032 seconds
+[0m13:26:19.980451 [debug] [Thread-1  ]: On test.nova_dbt.not_null_mart_platform_impact_total_students.39112277dc: ROLLBACK
+[0m13:26:19.980451 [debug] [Thread-1  ]: Failed to rollback 'test.nova_dbt.not_null_mart_platform_impact_total_students.39112277dc'
+[0m13:26:19.981450 [debug] [Thread-1  ]: On test.nova_dbt.not_null_mart_platform_impact_total_students.39112277dc: Close
+[0m13:26:19.982451 [info ] [Thread-1  ]: 2 of 2 PASS not_null_mart_platform_impact_total_students ....................... [[32mPASS[0m in 0.05s]
+[0m13:26:19.983450 [debug] [Thread-1  ]: Finished running node test.nova_dbt.not_null_mart_platform_impact_total_students.39112277dc
+[0m13:26:19.984450 [debug] [MainThread]: Using duckdb connection "master"
+[0m13:26:19.984450 [debug] [MainThread]: On master: BEGIN
+[0m13:26:19.985454 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m13:26:19.985454 [debug] [MainThread]: SQL status: OK in 0.001 seconds
+[0m13:26:19.986451 [debug] [MainThread]: On master: COMMIT
+[0m13:26:19.986451 [debug] [MainThread]: Using duckdb connection "master"
+[0m13:26:19.987453 [debug] [MainThread]: On master: COMMIT
+[0m13:26:19.987453 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m13:26:19.988454 [debug] [MainThread]: On master: Close
+[0m13:26:19.988454 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m13:26:19.988454 [debug] [MainThread]: Connection 'list_dev_main' was properly closed.
+[0m13:26:19.989455 [debug] [MainThread]: Connection 'test.nova_dbt.not_null_mart_platform_impact_total_students.39112277dc' was properly closed.
+[0m13:26:19.989455 [info ] [MainThread]: 
+[0m13:26:19.990451 [info ] [MainThread]: Finished running 2 data tests in 0 hours 0 minutes and 0.25 seconds (0.25s).
+[0m13:26:19.991456 [debug] [MainThread]: Command end result
+[0m13:26:20.009452 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\ERKAN\Desktop\DATA\nova_dbt\target\manifest.json
+[0m13:26:20.011454 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\ERKAN\Desktop\DATA\nova_dbt\target\semantic_manifest.json
+[0m13:26:20.018456 [debug] [MainThread]: Wrote artifact RunExecutionResult to C:\Users\ERKAN\Desktop\DATA\nova_dbt\target\run_results.json
+[0m13:26:20.018456 [info ] [MainThread]: 
+[0m13:26:20.019451 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m13:26:20.019451 [info ] [MainThread]: 
+[0m13:26:20.019451 [info ] [MainThread]: Done. PASS=2 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=2
+[0m13:26:20.021455 [debug] [MainThread]: Command `python -m dbt.cli.main test` succeeded at 13:26:20.021455 after 1.39 seconds
+[0m13:26:20.021455 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000013CF3458D30>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000013CF5E25340>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000013CF1F5C430>]}
+[0m13:26:20.022454 [debug] [MainThread]: Flushing usage events
+[0m13:26:20.612615 [debug] [MainThread]: An error was encountered while trying to flush usage events

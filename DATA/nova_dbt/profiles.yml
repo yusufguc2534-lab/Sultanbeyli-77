@@ -1,0 +1,6 @@
+nova_dbt:
+  outputs:
+    dev:
+      type: duckdb
+      path: dev.duckdb
+  target: dev
