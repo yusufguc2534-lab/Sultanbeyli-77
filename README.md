@@ -187,13 +187,13 @@ Projede veri bütünlüğünü sağlamak için dbt test mekanizmaları kullanıl
 
 ##  Ekip Üyeleri ve Katkıda Bulunanlar
 
-* **Yusuf Yetkin Güç** (Veri Çekme, DBT Alytapsısı Kurma )
+* **Yusuf Yetkin Güç** (Veri Çekme, DBT Alt yapısı Kurma )
 
 * **Yusuf Bilgin**  (Readme ve Rapor ekleme)
 
-* **Muhammet Furkan Alada** (Dashbord Grafik Ekleme ve CSV Modeli Oluşturma , Marts Modelleri Oluşturma)
+* **Muhammet Furkan Alada** (Dashboard Grafik Ekleme ve CSV Modeli Oluşturma , Marts Modelleri Oluşturma)
 
-* **Eray Kaan Aydınlı** (Dashbord Grafik Ekleme ve Modelleri Test Etme)
+* **Eray Kaan Aydınlı** (Dashboard Grafik Ekleme ve Modelleri Test Etme)
 
 * **Asım Aygün** (Dashboard Grafik ekleme ve Staging veri temizleme)
 
