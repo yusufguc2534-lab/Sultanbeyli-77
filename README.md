@@ -1,12 +1,12 @@
-📊 Sultanbeyli-77: Sosyal Medya Kullanımı, Yaşam Tarzı ve Akademik Başarı Demografik Analiz Projesi
+Sultanbeyli-77: Sosyal Medya Kullanımı, Yaşam Tarzı ve Akademik Başarı Demografik Analiz Projesi
 
-## 📜 Proje Özeti
+## Proje Özeti
 
 **Sultanbeyli-77** projesi, üniversite ve lise öğrencilerinin günlük sosyal medya kullanım alışkanlıklarının; akademik başarı (GPA), uyku kalitesi, stres seviyeleri ve genel ruh sağlığı (zihinsel iyi oluş) üzerindeki doğrudan ve dolaylı etkilerini araştıran uçtan uca bir **Veri Mühendisliği ve İş Zekası (BI)** çalışmasıdır.
 
 Bu projede ham veriler modern veri hattı (data pipeline) prensiplerine uygun olarak işlenmiş; **dbt (data build tool)** ve **DuckDB** mimarisi üzerinde modellenerek **Power BI** üzerinden karar vericiler için interaktif panellere dönüştürülmüştür.
 
-## 🏗️ Proje Mimarisi ve Teknoloji Yığını
+##  Proje Mimarisi ve Teknoloji Yığını
 
 Proje, modern **ELT (Extract, Load, Transform)** yaklaşımını benimsemektedir:
 
@@ -39,7 +39,7 @@ Proje, modern **ELT (Extract, Load, Transform)** yaklaşımını benimsemektedir
 
 * **Geliştirme Ortamı & Versiyon Kontrol:** VS Code, Git & GitHub
 
-## 📁 Detaylı Dizin Yapısı
+## Detaylı Dizin Yapısı
 
 Proje dizini aşağıdaki işlevsel modüllerden oluşmaktadır:
 
@@ -72,7 +72,7 @@ Sultanbeyli-77/
 
 ```
 
-## 📐 dbt Veri Modelleme Katmanları ve SQL Mantığı
+##  dbt Veri Modelleme Katmanları ve SQL Mantığı
 
 Projedeki veriler dbt içerisinde 3 ana katmanda işlenmektedir:
 
@@ -96,7 +96,7 @@ Analiz ve Power BI görsellerini besleyen ana iş tabloları şunlardır:
 
   * **İçerik:** Ana sosyal medya platformları (`primary_platform`) bazında günlük ortalama kullanım süreleri (`avg_daily_hours`), stres skorları (`avg_stress_score`) ve zihinsel sağlık göstergelerini (`avg_mental_health_score`) özetler.
 
-## ⚙️ Kurulum ve Adım Adım Çalıştırma Rehberi
+##  Kurulum ve Adım Adım Çalıştırma Rehberi
 
 Projenin sıfırdan bir bilgisayarda ayağa kaldırılması için gereken adımlar:
 
@@ -135,7 +135,7 @@ python -c "import duckdb; con = duckdb.connect('dev.duckdb'); con.execute('COPY 
 
 Bu komut sonucunda dizinde `mart_demographic_summary.csv` ve `mart_platform_impact.csv` dosyaları hazır hale gelecektir.
 
-## 📊 Power BI Dashboard ve Görselleştirme Mimarisi
+##  Power BI Dashboard ve Görselleştirme Mimarisi
 
 Power BI üzerinde kurgulanan iş zekası raporu 3 temel bileşenden oluşmaktadır:
 
@@ -177,7 +177,7 @@ Power BI üzerinde kurgulanan iş zekası raporu 3 temel bileşenden oluşmaktad
 
 * **Yaş Grubu Filtresi:** `age_group`
 
-## 🧪 Veri Kalitesi ve Testler
+## Veri Kalitesi ve Testler
 
 Projede veri bütünlüğünü sağlamak için dbt test mekanizmaları kullanılmıştır:
 
@@ -185,7 +185,7 @@ Projede veri bütünlüğünü sağlamak için dbt test mekanizmaları kullanıl
 
 * **Kabul Edilebilir Değer Testleri:** GPA değerlerinin 0.0 - 4.0 aralığında ve günlük saatlerin 0-24 saat arasında olduğu kontrol edilmiştir.
 
-## 👥 Ekip Üyeleri ve Katkıda Bulunanlar
+##  Ekip Üyeleri ve Katkıda Bulunanlar
 
 * **Yusuf Yetkin Güç** (Veri Çekme, DBT Alytapsısı Kurma )
 
