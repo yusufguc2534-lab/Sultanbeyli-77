@@ -96,45 +96,6 @@ Analiz ve Power BI görsellerini besleyen ana iş tabloları şunlardır:
 
   * **İçerik:** Ana sosyal medya platformları (`primary_platform`) bazında günlük ortalama kullanım süreleri (`avg_daily_hours`), stres skorları (`avg_stress_score`) ve zihinsel sağlık göstergelerini (`avg_mental_health_score`) özetler.
 
-## Kurulum ve Adım Adım Çalıştırma Rehberi
-
-Projenin sıfırdan bir bilgisayarda ayağa kaldırılması için gereken adımlar:
-
-### 1. Gereksinimlerin Kontrol Edilmesi
-
-Sisteminizde **Python 3.8+**, **Git** ve **Power BI Desktop** kurulu olmalıdır.
-
-### 2. Proje Dizinine Geçiş
-
-Terminal veya PowerShell üzerinden projenin dbt klasörüne girin:
-
-```
-cd C:\Users\user\Sultanbeyli-77\DATA\nova_dbt
-
-```
-
-### 3. dbt Modellerinin Derlenmesi (`dbt run`)
-
-dbt modellerinin DuckDB üzerinde çalıştırılması ve tabloların üretilmesi için:
-
-```
-python -m dbt.cli.main run --profiles-dir .
-
-```
-
-> **Başarı Çıktısı:** Terminalde `Done. PASS=4 WARN=0 ERROR=0` ve `Completed successfully` ibareleri görülmelidir.
-
-### 4. Power BI için CSV Dosyalarının Oluşturulması
-
-DuckDB tablolarının Power BI'a aktarımı için aşağıdaki Python komutunu tek satırda çalıştırın:
-
-```
-python -c "import duckdb; con = duckdb.connect('dev.duckdb'); con.execute('COPY mart_demographic_summary TO ''mart_demographic_summary.csv'' (HEADER); COPY mart_platform_impact TO ''mart_platform_impact.csv'' (HEADER);')"
-
-```
-
-Bu komut sonucunda dizinde `mart_demographic_summary.csv` ve `mart_platform_impact.csv` dosyaları hazır hale gelecektir.
-
 ##  Power BI Dashboard ve Görselleştirme Mimarisi
 
 Power BI üzerinde kurgulanan iş zekası raporu 3 temel bileşenden oluşmaktadır:
