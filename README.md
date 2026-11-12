@@ -191,9 +191,9 @@ Projede veri bütünlüğünü sağlamak için dbt test mekanizmaları kullanıl
 
 * **Yusuf Bilgin**  (Readme ve Rapor ekleme)
 
-* **Muhammet Furkan Alada** (Dasbord Grafik Ekleme ve CSV Modeli Oluşturma , Mars Modelleri Oluşturma)
+* **Muhammet Furkan Alada** (Dashbord Grafik Ekleme ve CSV Modeli Oluşturma , Marts Modelleri Oluşturma)
 
-* **Eray Kaan Aydınlı** (Dasbord Grafik Ekleme ve Modelleri Test Etme)
+* **Eray Kaan Aydınlı** (Dashbord Grafik Ekleme ve Modelleri Test Etme)
 
-* **Asım Aygün** (Dasboard Grafik ekleme ve Staging veri temizleme)
+* **Asım Aygün** (Dashboard Grafik ekleme ve Staging veri temizleme)
 
